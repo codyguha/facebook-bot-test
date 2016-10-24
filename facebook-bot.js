@@ -64,8 +64,6 @@ This bot demonstrates many of the core features of Botkit:
     -> http://howdy.ai/botkit
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-process.env.page_token = "EAACjYubj8vgBAMKf9bpSZANVS1yJ7bVUW7RgYjoOUHZBpzhh9AqOIGwS6ZAIrFztTyV6jn4zisWYliGZAdbKKg6ZBGck7Iqkbtf0h1goq0rjvuSm7Me966q9XeyriEQRdVwatF2hRpPpFR5oqBHjfcKGgVlJoiI1vOuBMBUfhLgZDZD"
-process.env.verify_token= 'SUPER_SECRET_LOL' 
 
 if (!process.env.page_token) {
     console.log('Error: Specify page_token in environment');
