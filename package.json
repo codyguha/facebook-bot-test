@@ -1,0 +1,14 @@
+{
+  "name": "vclabs-facebook-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "facebook-bot.js",
+  "scripts": {
+    "start": "node facebook-bot.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "4.1.1"
+  }
+}
