@@ -1,80 +1,3 @@
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-           ______     ______     ______   __  __     __     ______
-          /\  == \   /\  __ \   /\__  _\ /\ \/ /    /\ \   /\__  _\
-          \ \  __<   \ \ \/\ \  \/_/\ \/ \ \  _"-.  \ \ \  \/_/\ \/
-           \ \_____\  \ \_____\    \ \_\  \ \_\ \_\  \ \_\    \ \_\
-            \/_____/   \/_____/     \/_/   \/_/\/_/   \/_/     \/_/
-
-
-This is a sample Facebook bot built with Botkit.
-
-This bot demonstrates many of the core features of Botkit:
-
-* Connect to Facebook's Messenger APIs
-* Receive messages based on "spoken" patterns
-* Reply to messages
-* Use the conversation system to ask questions
-* Use the built in storage system to store and retrieve information
-  for a user.
-
-# RUN THE BOT:
-
-  Follow the instructions here to set up your Facebook app and page:
-
-    -> https://developers.facebook.com/docs/messenger-platform/implementation
-
-  Run your bot from the command line:
-
-    page_token=<MY PAGE TOKEN> verify_token=<MY_VERIFY_TOKEN> node facebook_bot.js [--lt [--ltsubdomain LOCALTUNNEL_SUBDOMAIN]]
-
-  Use the --lt option to make your bot available on the web through localtunnel.me.
-
-# USE THE BOT:
-
-  Find your bot inside Facebook to send it a direct message.
-
-  Say: "Hello"
-
-  The bot will reply "Hello!"
-
-  Say: "who are you?"
-
-  The bot will tell you its name, where it running, and for how long.
-
-  Say: "Call me <nickname>"
-
-  Tell the bot your nickname. Now you are friends.
-
-  Say: "who am I?"
-
-  The bot will tell you your nickname, if it knows one for you.
-
-  Say: "shutdown"
-
-  The bot will ask if you are sure, and then shut itself down.
-
-  Make sure to invite your bot into other channels using /invite @<my bot>!
-
-# EXTEND THE BOT:
-
-  Botkit has many features for building cool and useful bots!
-
-  Read all about it here:
-
-    -> http://howdy.ai/botkit
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-if (!process.env.page_token) {
-    console.log('Error: Specify page_token in environment');
-    process.exit(1);
-}
-
-if (!process.env.verify_token) {
-    console.log('Error: Specify verify_token in environment');
-    process.exit(1);
-}
-
 var Botkit = require('botkit/lib/Botkit.js');
 
 var controller = Botkit.facebookbot({
@@ -95,3 +18,385 @@ controller.setupWebserver(process.env.PORT || 3000, function(err, webserver) {
 controller.hears(['hello', 'hi'], 'message_received', function(bot, message) {
     bot.reply(message, 'Hello user !');
 });
+
+controller.hears(['how are you?'], 'message_received', function(bot, message) {
+    bot.reply(message, "I'm great thanks for asking!");
+});
+
+controller.hears(['what can I do here?'], 'message_received', function(bot, message) {
+    bot.reply(message, "You can complete surveys with me to help me complete my research!");
+});
+
+controller.hears(['menu'], 'message_received', function(bot, message) {
+    var attachment = {
+        'type':'template',
+        'payload':{
+            'template_type':'button',
+            'text': 'Please choose a survey',
+            'buttons':[
+                {
+                'type':'postback',
+                'title':`Chicken survey`,
+                'payload':`yes(chicken)`
+                },
+                {
+                'type':'postback',
+                'title':`No thanks`,
+                'payload':`no(survey)`
+                },
+
+            ]
+        }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+
+});
+
+controller.hears(['help'], 'message_received', function(bot, message) {
+    bot.reply(message, "type 'menu' to see a list of surveys to complete. or just say 'hi'.");
+});
+
+controller.on('facebook_postback', function(bot, message) {
+    if (message.payload == 'yes(chicken)') {
+        bot.reply(message, `Excellent! Lets get started.`);
+        // getProfile(message.user, function(err, profile) {
+        //     survey_result.user = `${profile.first_name} ${profile.last_name}`
+        //     survey_result.gender = `${profile.gender}`
+        //     survey_result.locale = `${profile.locale}`
+        //     survey_result.timezone = `${profile.timezone}`
+        // });
+        askRelationship(bot, message)
+    } else if (message.payload == 'I love it' || message.payload == 'I hate it' || message.payload == 'Guilty pleasure') {
+        // if (survey_result.relationship == null) {
+        //     survey_result.relationship = message.payload
+            askDetail(bot, message)
+        // } else {
+        //     bot.reply(message, answered_true_msg);     
+        // }
+    } else if (message.payload == 'I make it myself' || message.payload == 'KFC is my go to' || message.payload == 'Any way is good' || message.payload == 'Fried food is gross' || message.payload == `I don't eat animals` || message.payload == `It's a secret` || message.payload == `reward` ||message.payload == `cures hangover`) {
+        // if (survey_result.detail == null) {
+        //     survey_result.detail = message.payload
+            askMood(bot, message)
+        // } else {
+        //     bot.reply(message, answered_true_msg);     
+        // }
+    } else if (message.payload == ':)' || message.payload == ':(' || message.payload == '-_-') {
+            // if (survey_result.mood == null) {
+            //     survey_result.mood = message.payload
+                askPreference(bot, message)
+            // } else {
+            //     bot.reply(message, answered_true_msg);     
+            // }
+        
+    } else if (message.payload == 'Chicken Parmesan' || message.payload == 'Double Down' || message.payload == 'Fried Drumsticks' || message.payload == 'Chicken Nuggets' || message.payload == 'Veggies') {
+        
+            // if (survey_result.preference == null) {
+            //     survey_result.preference = message.payload
+                askHungry(bot, message)
+            // } else {
+            //     bot.reply(message, answered_true_msg);     
+            // }
+
+    } else if (message.payload == 'yes' || message.payload == 'no' ) {
+        
+            // if (survey_result.hungry == null) {
+            //     survey_result.hungry = message.payload
+                sayThanks(bot, message)
+            // } else if (survey_result == {}){
+            // bot.reply(message, answered_true_msg); 
+            // }
+    }
+});
+
+// QUESTIONS
+askSurvey = function(bot, message) {
+    var attachment = {
+        'type':'template',
+        'payload':{
+            'template_type':'button',
+            'text': 'Do you have a moment to answer some questions about fried chicken ?',
+            'buttons':[
+                {
+                'type':'postback',
+                'title':`Yes`,
+                'payload':`yes(start)`
+                },
+                {
+                'type':'postback',
+                'title':`No`,
+                'payload':`no(survey)`
+                }
+            ]
+        }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+}
+
+askRelationship = function(bot, message) {
+    var attachment = {
+        'type':'template',
+        'payload':{
+            'template_type':'button',
+            'text':  'What would you say your relationship is with fried chicken ?',
+            'buttons':[
+                {
+                'type':'postback',
+                'title':'I love it',
+                'payload':'I love it'
+                },
+                {
+                'type':'postback',
+                'title':'I hate it',
+                'payload':'I hate it'
+                },
+                {
+                'type':'postback',
+                'title':'Guilty pleasure',
+                'payload':'Guilty pleasure'
+                }
+            ]
+        }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+}
+
+askDetail = function(bot, message) {
+    if (message.payload == 'I love it') {
+        var attachment = {
+            'type':'template',
+            'payload':{
+                'template_type':'button',
+                'text': 'What is your favourite way to eat fried chicken ?',
+                'buttons':[
+                    {
+                    'type':'postback',
+                    'title':'I make it myself',
+                    'payload':'I make it myself'
+                    },
+                    {
+                    'type':'postback',
+                    'title':'KFC is my go to',
+                    'payload':'KFC is my go to'
+                    },
+                    {
+                    'type':'postback',
+                    'title':'Any way is good',
+                    'payload':'Any way is good'
+                    }
+                ]
+            }
+        };
+
+        bot.reply(message, {
+            attachment: attachment,
+        });
+        
+    } else if (message.payload == 'I hate it') {
+        var attachment = {
+            'type':'template',
+            'payload':{
+                'template_type':'button',
+                'text': 'Not a fan ? tell me more.',
+                'buttons':[
+                    {
+                    'type':'postback',
+                    'title':'Fried food is gross',
+                    'payload':'Fried food is gross'
+                    },
+                    {
+                    'type':'postback',
+                    'title':`I don't eat animals`,
+                    'payload':`I don't eat animals`
+                    },
+                    {
+                    'type':'postback',
+                    'title':`It's a secret`,
+                    'payload':`It's a secret`
+                    }
+                ]
+            }
+        };
+
+        bot.reply(message, {
+            attachment: attachment,
+        });
+
+    } else if (message.payload == 'Guilty pleasure') {
+        var attachment = {
+            'type':'template',
+            'payload':{
+                'template_type':'button',
+                'text':  'Guilty pleasure you say, tell me more.',
+                'buttons':[
+                    {
+                    'type':'postback',
+                    'title':'When Hungover',
+                    'payload':'cures hangover'
+                    },
+                    {
+                    'type':'postback',
+                    'title':'Reward for myself',
+                    'payload':'reward'
+                    },
+                    {
+                    'type':'postback',
+                    'title':`It's a secret`,
+                    'payload':`It's a secret`
+                    }
+                ]
+            }
+        };
+
+        bot.reply(message, {
+            attachment: attachment,
+        });
+
+    } else  {
+        bot.reply(message, 'oops')
+    }
+
+}
+
+askMood = function(bot, message) {
+    var attachment = {
+        'type':'template',
+        'payload':{
+            'template_type':'button',
+            'text': 'What is your current mood ?',
+            'buttons':[
+                {
+                'type':'postback',
+                'title':`:)`,
+                'payload':`:)`
+                },
+                {
+                'type':'postback',
+                'title':`:(`,
+                'payload':`:(`
+                },
+                {
+                'type':'postback',
+                'title':`-_-`,
+                'payload':`-_-`
+                }
+            ]
+        }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+
+}
+
+askPreference = function(bot, message) {
+    var attachment = {
+        'type':'template',
+        'payload': {
+                'template_type': 'generic',
+                'elements': [
+                    {
+                        'title': 'Chicken Parmesan',
+                        'image_url': 'http://fiber-international.com/wp-content/uploads/2015/04/800x600-chicken.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'Choose',
+                                'payload': 'Chicken Parmesan'
+                            }
+                        ]
+                    },
+                    {
+                        'title': 'Double Down',
+                        'image_url': 'http://assets.bwbx.io/images/ieMg5BCeWkWU/v1/-1x-1.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'Choose',
+                                'payload': 'Double Down'
+                            }
+                        ]
+                    },
+                    {
+                        'title': 'Fried Drumsticks',
+                        'image_url': 'https://i.ytimg.com/vi/G8hbFO-r2nQ/maxresdefault.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'Choose',
+                                'payload': 'Fried Drumsticks'
+                            }
+                        ]
+                    },
+                    {
+                        'title': 'Chicken Nuggets',
+                        'image_url': 'http://www.urbanmommies.com/wp-content/uploads/McDonalds-Chicken-Nuggets.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'Choose',
+                                'payload': 'Chicken Nuggets'
+                            }
+                        ]
+                    },
+                    {
+                        'title': 'Veggies',
+                        'image_url': 'http://www.stevensonfitness.com/wp-content/uploads/2014/10/veggies.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'Choose',
+                                'payload': 'Veggies'
+                            }
+                        ]
+                    }
+                ]
+            }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+
+    bot.reply(message, 'Which of these meals your you like to be eating right now ?');
+}
+
+askHungry = function(bot, message) {
+    var attachment = {
+        'type':'template',
+        'payload':{
+            'template_type':'button',
+            'text': 'Have I made you hungry ?',
+            'buttons':[
+                {
+                'type':'postback',
+                'title':`yes`,
+                'payload':`yes`
+                },
+                {
+                'type':'postback',
+                'title':`no`,
+                'payload':`no`
+                }
+            ]
+        }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+
+}
+// OTHER RESPONSES
+sayThanks = function(bot, message) {
+  bot.reply(message, 'OK! thanks for your time');
+}
