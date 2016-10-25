@@ -27,6 +27,10 @@ controller.hears(['what can I do here?'], 'message_received', function(bot, mess
     bot.reply(message, "You can complete surveys with me to help me complete my research!");
 });
 
+controller.hears(['Chicken survey'], 'message_received', function(bot, message) {
+   askRelationship(bot, message)
+});
+
 controller.hears(['menu'], 'message_received', function(bot, message) {
     var attachment = {
         'type':'template',
@@ -100,7 +104,7 @@ controller.on('facebook_postback', function(bot, message) {
             //     bot.reply(message, answered_true_msg);     
             // }
 
-    } else if (message.payload == 'yes' || message.payload == 'no' ) {
+    } else if (message.payload == 'yes' || message.payload == 'no' || message.payload == 'no(survey)') {
         
             // if (survey_result.hungry == null) {
             //     survey_result.hungry = message.payload
