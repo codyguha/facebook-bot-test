@@ -327,7 +327,7 @@ askPreference = function(bot, message) {
                         'buttons': [
                             {
                                 'type': 'postback',
-                                'title': 'Choose',
+                                'title': 'Chicken Parmesan',
                                 'payload': 'Chicken Parmesan'
                             }
                         ]
@@ -338,7 +338,7 @@ askPreference = function(bot, message) {
                         'buttons': [
                             {
                                 'type': 'postback',
-                                'title': 'Choose',
+                                'title': 'Double Down',
                                 'payload': 'Double Down'
                             }
                         ]
@@ -349,7 +349,7 @@ askPreference = function(bot, message) {
                         'buttons': [
                             {
                                 'type': 'postback',
-                                'title': 'Choose',
+                                'title': 'Fried Drumsticks',
                                 'payload': 'Fried Drumsticks'
                             }
                         ]
@@ -360,7 +360,7 @@ askPreference = function(bot, message) {
                         'buttons': [
                             {
                                 'type': 'postback',
-                                'title': 'Choose',
+                                'title': 'Chicken Nuggets',
                                 'payload': 'Chicken Nuggets'
                             }
                         ]
@@ -371,7 +371,7 @@ askPreference = function(bot, message) {
                         'buttons': [
                             {
                                 'type': 'postback',
-                                'title': 'Choose',
+                                'title': 'Veggies',
                                 'payload': 'Veggies'
                             }
                         ]
