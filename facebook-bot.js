@@ -275,36 +275,12 @@ askDetail = function(bot, message) {
 askMood = function(bot, message) {
      bot.startConversation(message, function(err, convo) {
         convo.ask('What is your current mood ? (please respond with emoticon)', function(response, convo) {
-            convo.ask('Your current mood is... ' + response.attachments.image + '` ?', [
-                            {
-                                pattern: 'yes',
-                                callback: function(response, convo) {
-                                    // since no further messages are queued after this,
-                                    // the conversation will end naturally with status == 'completed'
-                                    convo.next();
-                                }
-                            },
-                            {
-                                pattern: 'no',
-                                callback: function(response, convo) {
-                                    // stop the conversation. this will cause it to end with status == 'stopped'
-                                    convo.stop();
-                                }
-                            },
-                            {
-                                default: true,
-                                callback: function(response, convo) {
-                                    convo.repeat();
-                                    convo.next();
-                                }
-                            }
-                        ]);
+            convo.next();
         });
         convo.on('end', function(convo) {
             if (convo.status == 'completed') {
-               askPreference(bot, message);
-            } else if (convo.status == 'stopped'){
-                askMood(bot, message)
+                bot.reply(message, "thanks got it !");
+                askPreference(bot, message);
             }
         });
      });
