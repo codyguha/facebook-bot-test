@@ -63,7 +63,7 @@ controller.hears(['help'], 'message_received', function(bot, message) {
     bot.reply(message, "type 'menu' to see a list of surveys to complete. or just say 'hi'.");
 });
 
-controller.on('facebook_postback', function(bot, message) {
+controller.on([],'facebook_postback', function(bot, message) {
     console.log("HIT!")
     console.log(message.postback)
 
