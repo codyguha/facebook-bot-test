@@ -15,7 +15,7 @@ controller.setupWebserver(process.env.PORT || 3000, function(err, webserver) {
     });
 });
 
-controller.hears(['hello', 'hi'], 'message_received', function(bot, message) {
+controller.hears(['hi'], 'message_received', function(bot, message) {
     bot.reply(message, 'Hello user !');
 });
 
@@ -37,7 +37,7 @@ controller.hears(['menu'], 'message_received', function(bot, message) {
                 {
                 'type':'postback',
                 'title':`Chicken survey`,
-                'payload':`yes(chicken)`
+                'payload':`yes(chcken)`
                 },
                 {
                 'type':'postback',
@@ -59,10 +59,14 @@ controller.hears(['help'], 'message_received', function(bot, message) {
     bot.reply(message, "type 'menu' to see a list of surveys to complete. or just say 'hi'.");
 });
 
+controller.on('message_received', function(bot, message) {
+    console.log(message)
+    return false;
+});
 
 controller.on('facebook_postback', function(bot, message) {
 
-    if (message.payload == 'yes(chicken)') {
+    if (message.payload == 'yes(chcken)') {
         bot.reply(message, `Excellent! Lets get started.`);
         // getProfile(message.user, function(err, profile) {
         //     survey_result.user = `${profile.first_name} ${profile.last_name}`
@@ -269,34 +273,44 @@ askDetail = function(bot, message) {
 }
 
 askMood = function(bot, message) {
-    var attachment = {
-        'type':'template',
-        'payload':{
-            'template_type':'button',
-            'text': 'What is your current mood ?',
-            'buttons':[
-                {
-                'type':'postback',
-                'title':`:)`,
-                'payload':`:)`
-                },
-                {
-                'type':'postback',
-                'title':`:(`,
-                'payload':`:(`
-                },
-                {
-                'type':'postback',
-                'title':`-_-`,
-                'payload':`-_-`
-                }
-            ]
-        }
-    };
+     bot.startConversation(message, function(err, convo) {
+        convo.ask('What is your current mood ? (please respond with emoticon)', function(response, convo) {
+            convo.next();
+        });
+        convo.on('end', function(convo) {
+            if (convo.status == 'completed') {
+               askPreference(bot, message);
+            }
+        });
+     });
+    // var attachment = {
+    //     'type':'template',
+    //     'payload':{
+    //         'template_type':'button',
+    //         'text': 'What is your current mood ?',
+    //         'buttons':[
+    //             {
+    //             'type':'postback',
+    //             'title':`:)`,
+    //             'payload':`:)`
+    //             },
+    //             {
+    //             'type':'postback',
+    //             'title':`:(`,
+    //             'payload':`:(`
+    //             },
+    //             {
+    //             'type':'postback',
+    //             'title':`-_-`,
+    //             'payload':`-_-`
+    //             }
+    //         ]
+    //     }
+    // };
 
-    bot.reply(message, {
-        attachment: attachment,
-    });
+    // bot.reply(message, {
+    //     attachment: attachment,
+    // });
 
 }
 
