@@ -1,4 +1,5 @@
 var Botkit = require('botkit/lib/Botkit.js');
+var mongodb = require('mongodb');
 
 var controller = Botkit.facebookbot({
     debug: true,
@@ -15,8 +16,41 @@ controller.setupWebserver(process.env.PORT || 3000, function(err, webserver) {
     });
 });
 
+saveToMongoDb = function (what, where) {
+    mongodb.MongoClient.connect(process.env.MONGODB_URI, function(err, db) {
+        if (err) throw err;
+        var results = db.collection('results');
+        results.insert({
+          where: what
+        })
+}
+
+/// GET USER INFO !!!
+getProfile = function (id, cb) {
+
+    if (!cb) cb = Function.prototype
+
+    request({
+      method: 'GET',
+      uri: `https://graph.facebook.com/v2.6/${id}`,
+      qs: {
+        fields: 'first_name,last_name,profile_pic,gender,locale,timezone',
+        access_token: process.env.page_token
+      },
+      json: true
+    }, function(err, res, body) {
+      if (err) return cb(err)
+      if (body.error) return cb(body.error)
+
+      cb(null, body)
+    })
+}
+
 controller.hears(['hi'], 'message_received', function(bot, message) {
     bot.reply(message, 'Hello user !');
+    getProfile(message.user, function(err, profile) {
+            saveToMongoDb("user", `${profile.first_name} ${profile.last_name}`)
+        });
 });
 
 controller.hears(['how are you?'], 'message_received', function(bot, message) {
@@ -56,7 +90,7 @@ controller.hears(['menu'], 'message_received', function(bot, message) {
 });
 
 controller.hears(['help'], 'message_received', function(bot, message) {
-    bot.reply(message, "type 'menu' to see a list of surveys to complete. or just say 'hi'.");
+    bot.reply(message, "type 'menu' to see a list of surveys to complete. Or just say 'hi'.");
 });
 
 controller.on('message_received', function(bot, message) {
@@ -68,12 +102,9 @@ controller.on('facebook_postback', function(bot, message) {
 
     if (message.payload == 'yes(chcken)') {
         bot.reply(message, `Excellent! Lets get started.`);
-        // getProfile(message.user, function(err, profile) {
-        //     survey_result.user = `${profile.first_name} ${profile.last_name}`
-        //     survey_result.gender = `${profile.gender}`
-        //     survey_result.locale = `${profile.locale}`
-        //     survey_result.timezone = `${profile.timezone}`
-        // });
+        getProfile(message.user, function(err, profile) {
+            saveToMongoDb("user", `${profile.first_name} ${profile.last_name}`)
+        });
         askRelationship(bot, message)
     } else if (message.payload == 'I love it' || message.payload == 'I hate it' || message.payload == 'Guilty pleasure') {
         // if (survey_result.relationship == null) {
@@ -280,7 +311,9 @@ askMood = function(bot, message) {
         convo.on('end', function(convo) {
             if (convo.status == 'completed') {
                 bot.reply(message, "thanks got it !");
-                askPreference(bot, message);
+                setTimeout(function(){
+                    askPreference(bot, message);
+                }, 2000);          
             }
         });
      });
