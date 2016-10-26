@@ -25,13 +25,13 @@ saveToMongoDb = function (v) {
     })
 }
 
-saveUserToMongoDb = function (user_id, first_name, last_name, gender, locale, timezone) {
+saveUserToMongoDb = function (id, first_name, last_name, gender, locale, timezone) {
     mongodb.MongoClient.connect(process.env.MONGODB_URI, function(err, db) {
         if (err) throw err;
         var results = db.collection('results');
         results.insert({
+            _id: id,
             user:{
-                user_id: user_id,
                 first_name: first_name,
                 last_name: last_name,
                 gender: gender,
@@ -51,7 +51,7 @@ getProfile = function (id, cb) {
       method: 'GET',
       uri: `https://graph.facebook.com/v2.6/${id}`,
       qs: {
-        fields: 'user_id, first_name,last_name,profile_pic,gender,locale,timezone',
+        fields: 'id, first_name,last_name,profile_pic,gender,locale,timezone',
         access_token: process.env.page_token
       },
       json: true
@@ -66,7 +66,7 @@ getProfile = function (id, cb) {
 controller.hears(['hi'], 'message_received', function(bot, message) {
     bot.reply(message, 'Hello user !');
     getProfile(message.user, function(err, profile) {
-            saveUserToMongoDb(`${profile.user_id}`,`${profile.first_name}`, `${profile.last_name}`, `${profile.gender}`, `${profile.locale}`, `${profile.timezone}`)
+            saveUserToMongoDb(`${profile.id}`,`${profile.first_name}`, `${profile.last_name}`, `${profile.gender}`, `${profile.locale}`, `${profile.timezone}`)
         });
 });
 
