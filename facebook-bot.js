@@ -17,17 +17,16 @@ controller.setupWebserver(process.env.PORT || 3000, function(err, webserver) {
     });
 });
 
-saveToMongoDb = function (id, key, value) {
+saveRelationshipToMongoDb = function (id, payload) {
     mongodb.MongoClient.connect(process.env.MONGODB_URI, function(err, db) {
         if (err) throw err;
         var results = db.collection('results');
             results.update({
-                _id: id}, 
+                _id: `${id}`}, 
                     {   $set: {
-                            '${key}': value
+                            "chicken_survey.relationship": payload
                     }
             });
-            return
     })
 }
 
@@ -127,7 +126,7 @@ controller.on('facebook_postback', function(bot, message) {
             bot.reply(message, `Excellent! Lets get started.`);
             askRelationship(bot, message)
         } else if (message.payload == 'I love it' || message.payload == 'I hate it' || message.payload == 'Guilty pleasure') {
-            saveToMongoDb(message.user, "chicken_survey.relationship", message.payload)
+            saveRelationshipToMongoDb(message.user, message.payload)
             askDetail(bot, message)
         } else if (message.payload == 'I make it myself' || message.payload == 'KFC is my go to' || message.payload == 'Any way is good' || message.payload == 'Fried food is gross' || message.payload == `I don't eat animals` || message.payload == `It's a secret` || message.payload == `reward` ||message.payload == `cures hangover`) {
             // if (survey_result.detail == null) {
