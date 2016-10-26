@@ -23,6 +23,7 @@ saveToMongoDb = function (what, where) {
         results.insert({
           where: what
         })
+    })
 }
 
 /// GET USER INFO !!!
