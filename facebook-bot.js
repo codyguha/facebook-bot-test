@@ -17,14 +17,11 @@ controller.setupWebserver(process.env.PORT || 3000, function(err, webserver) {
     });
 });
 
-saveToMongoDb = function (v, k) {
+saveToMongoDb = function (v) {
     mongodb.MongoClient.connect(process.env.MONGODB_URI, function(err, db) {
         if (err) throw err;
         var results = db.collection('results');
-        var key = k+":";
-        results.insert({
-          key v
-        })
+        results.insert({v})
     })
 }
 
@@ -52,7 +49,7 @@ getProfile = function (id, cb) {
 controller.hears(['hi'], 'message_received', function(bot, message) {
     bot.reply(message, 'Hello user !');
     getProfile(message.user, function(err, profile) {
-            saveToMongoDb(`${profile.first_name} ${profile.last_name}`, "user")
+            saveToMongoDb(`user: ${profile.first_name} ${profile.last_name}`)
         });
 });
 
