@@ -127,6 +127,11 @@ controller.hears(['menu'], 'message_received', function(bot, message) {
                 },
                 {
                 'type':'postback',
+                'title':`Canadian Values`,
+                'payload':`yes(cndval)`
+                },
+                {
+                'type':'postback',
                 'title':`No thanks`,
                 'payload':`no(survey)`
                 },
@@ -146,7 +151,11 @@ controller.hears(['help'], 'message_received', function(bot, message) {
 });
 
 controller.on('message_received', function(bot, message) {
-    console.log(String(message.text))
+    console.log(message)
+});
+
+controller.on('facebook_optin', function(bot, message) {
+    bot.reply(message, "YOU CLICKED PLUGIN !!!");
 });
 
 controller.on('facebook_postback', function(bot, message) {
