@@ -135,12 +135,12 @@ controller.on('facebook_postback', function(bot, message) {
             bot.reply(message, `Excellent! Lets get started.`);
             askRelationship(bot, message)
         } else if (message.payload == 'I love it' || message.payload == 'I hate it' || message.payload == 'Guilty pleasure') {
-            saveRelationshipToMongoDb(message.user, message.payload, relationship)
+            saveRelationshipToMongoDb(message.user, message.payload, "relationship")
             askDetail(bot, message)
         } else if (message.payload == 'I make it myself' || message.payload == 'KFC is my go to' || message.payload == 'Any way is good' || message.payload == 'Fried food is gross' || message.payload == `I don't eat animals` || message.payload == `It's a secret` || message.payload == `reward` ||message.payload == `cures hangover`) {
             // if (survey_result.detail == null) {
             //     survey_result.detail = message.payload
-                saveRelationshipToMongoDb(message.user, message.payload, detail)
+                saveRelationshipToMongoDb(message.user, message.payload, "detail")
                 askMood(bot, message)
             // } else {
             //     bot.reply(message, answered_true_msg);     
