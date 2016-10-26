@@ -17,7 +17,7 @@ controller.setupWebserver(process.env.PORT || 3000, function(err, webserver) {
     });
 });
 
-saveRelationshipToMongoDb = function (id, payload, key) {
+saveToMongoDb = function (id, value, key) {
     mongodb.MongoClient.connect(process.env.MONGODB_URI, function(err, db) {
         if (err) throw err;
         var results = db.collection('results');
@@ -25,17 +25,38 @@ saveRelationshipToMongoDb = function (id, payload, key) {
             results.update({
                 _id: `${id}`}, 
                     {   $set: {
-                            "chicken_survey.relationship": payload
+                            "chicken_survey.relationship": value
                     }
             });
         } else if (key === "detail"){
             results.update({
                 _id: `${id}`}, 
                     {   $set: {
-                            "chicken_survey.detail": payload
+                            "chicken_survey.detail": value
                     }
             });    
-        }  
+        } else if (key === "mood"){
+            results.update({
+                _id: `${id}`}, 
+                    {   $set: {
+                            "chicken_survey.mood": value
+                    }
+            });    
+        } else if (key === "preference"){
+            results.update({
+                _id: `${id}`}, 
+                    {   $set: {
+                            "chicken_survey.preference": value
+                    }
+            });    
+        } else if (key === "hungry"){
+            results.update({
+                _id: `${id}`}, 
+                    {   $set: {
+                            "chicken_survey.hungry": value
+                    }
+            });    
+        } 
     })
 }
 
@@ -126,7 +147,6 @@ controller.hears(['help'], 'message_received', function(bot, message) {
 
 controller.on('message_received', function(bot, message) {
     console.log(message)
-    return false;
 });
 
 controller.on('facebook_postback', function(bot, message) {
@@ -135,33 +155,17 @@ controller.on('facebook_postback', function(bot, message) {
             bot.reply(message, `Excellent! Lets get started.`);
             askRelationship(bot, message)
         } else if (message.payload == 'I love it' || message.payload == 'I hate it' || message.payload == 'Guilty pleasure') {
-            saveRelationshipToMongoDb(message.user, message.payload, "relationship")
+            saveToMongoDb(message.user, message.payload, "relationship")
             askDetail(bot, message)
         } else if (message.payload == 'I make it myself' || message.payload == 'KFC is my go to' || message.payload == 'Any way is good' || message.payload == 'Fried food is gross' || message.payload == `I don't eat animals` || message.payload == `It's a secret` || message.payload == `reward` ||message.payload == `cures hangover`) {
-            // if (survey_result.detail == null) {
-            //     survey_result.detail = message.payload
-                saveRelationshipToMongoDb(message.user, message.payload, "detail")
-                askMood(bot, message)
-            // } else {
-            //     bot.reply(message, answered_true_msg);     
-            // }
+            saveToMongoDb(message.user, message.payload, "detail")
+            askMood(bot, message)
         } else if (message.payload == 'Chicken Parmesan' || message.payload == 'Double Down' || message.payload == 'Fried Drumsticks' || message.payload == 'Chicken Nuggets' || message.payload == 'Veggies') {
-            
-                // if (survey_result.preference == null) {
-                //     survey_result.preference = message.payload
-                    askHungry(bot, message)
-                // } else {
-                //     bot.reply(message, answered_true_msg);     
-                // }
-
+            saveToMongoDb(message.user, message.payload, "preference")
+            askHungry(bot, message)
         } else if (message.payload == 'yes' || message.payload == 'no' || message.payload == 'no(survey)') {
-            
-                // if (survey_result.hungry == null) {
-                //     survey_result.hungry = message.payload
-                    sayThanks(bot, message)
-                // } else if (survey_result == {}){
-                // bot.reply(message, answered_true_msg); 
-                // }
+            saveToMongoDb(message.user, message.payload, "hungry")
+            sayThanks(bot, message)
         }
     });
 });
@@ -329,9 +333,10 @@ askMood = function(bot, message) {
         convo.on('end', function(convo) {
             if (convo.status == 'completed') {
                 bot.reply(message, "thanks got it !");
+                saveToMongoDb(message.user, message.text, "mood")
                 setTimeout(function(){
                     askPreference(bot, message);
-                }, 2000);          
+                }, 1000);          
             }
         });
      });
