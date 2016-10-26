@@ -25,6 +25,22 @@ saveToMongoDb = function (v) {
     })
 }
 
+saveUserToMongoDb = function (first_name, last_name, gender, locale, timezone) {
+    mongodb.MongoClient.connect(process.env.MONGODB_URI, function(err, db) {
+        if (err) throw err;
+        var results = db.collection('results');
+        results.insert({
+            user:{
+                first_name: first_name,
+                last_name: last_name
+                gender: gender,
+                locale: locale,
+                timezone: timezone
+            }
+        })
+    })
+}
+
 /// GET USER INFO !!!
 getProfile = function (id, cb) {
 
@@ -49,7 +65,7 @@ getProfile = function (id, cb) {
 controller.hears(['hi'], 'message_received', function(bot, message) {
     bot.reply(message, 'Hello user !');
     getProfile(message.user, function(err, profile) {
-            saveToMongoDb(`user: ${profile.first_name} ${profile.last_name}`)
+            saveUserToMongoDb(`${profile.first_name}`, `${profile.last_name}`, `${profile.gender}`, `${profile.locale}`, `${profile.timezone}`)
         });
 });
 
