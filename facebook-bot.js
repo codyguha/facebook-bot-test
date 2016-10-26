@@ -17,11 +17,21 @@ controller.setupWebserver(process.env.PORT || 3000, function(err, webserver) {
     });
 });
 
-saveToMongoDb = function (v) {
+saveToMongoDb = function (id, key, value) {
     mongodb.MongoClient.connect(process.env.MONGODB_URI, function(err, db) {
         if (err) throw err;
         var results = db.collection('results');
-        results.insert({v})
+        if (key == null) {
+                    results.update({
+                        _id: id}, 
+                            {   $set: {
+                                    '${key}': value
+                            }
+                    });
+            return
+        } else {
+            bot.reply(message, answered_true_msg); 
+        }
     })
 }
 
@@ -37,7 +47,7 @@ saveUserToMongoDb = function (id, first_name, last_name, gender, locale, timezon
                 gender: gender,
                 locale: locale,
                 timezone: timezone
-            }
+            },
         })
     })
 }
@@ -116,53 +126,40 @@ controller.on('message_received', function(bot, message) {
 });
 
 controller.on('facebook_postback', function(bot, message) {
-
-    if (message.payload == 'yes(chcken)') {
-        bot.reply(message, `Excellent! Lets get started.`);
-        getProfile(message.user, function(err, profile) {
-            saveToMongoDb("user", `${profile.first_name} ${profile.last_name}`)
-        });
-        askRelationship(bot, message)
-    } else if (message.payload == 'I love it' || message.payload == 'I hate it' || message.payload == 'Guilty pleasure') {
-        // if (survey_result.relationship == null) {
-        //     survey_result.relationship = message.payload
+    var answered_true_msg = "YOU HAVE ALREADY ANSWERED!!!!!"
+    getProfile(message.user, function(err, profile) {
+        if (message.payload == 'yes(chcken)') {
+            bot.reply(message, `Excellent! Lets get started.`);
+            askRelationship(bot, message)
+        } else if (message.payload == 'I love it' || message.payload == 'I hate it' || message.payload == 'Guilty pleasure') {
+            saveToMongoDb(message.user, "chicken_survey.relationship", message.payload)
             askDetail(bot, message)
-        // } else {
-        //     bot.reply(message, answered_true_msg);     
-        // }
-    } else if (message.payload == 'I make it myself' || message.payload == 'KFC is my go to' || message.payload == 'Any way is good' || message.payload == 'Fried food is gross' || message.payload == `I don't eat animals` || message.payload == `It's a secret` || message.payload == `reward` ||message.payload == `cures hangover`) {
-        // if (survey_result.detail == null) {
-        //     survey_result.detail = message.payload
-            askMood(bot, message)
-        // } else {
-        //     bot.reply(message, answered_true_msg);     
-        // }
-    } else if (message.payload == ':)' || message.payload == ':(' || message.payload == '-_-') {
-            // if (survey_result.mood == null) {
-            //     survey_result.mood = message.payload
-                askPreference(bot, message)
+        } else if (message.payload == 'I make it myself' || message.payload == 'KFC is my go to' || message.payload == 'Any way is good' || message.payload == 'Fried food is gross' || message.payload == `I don't eat animals` || message.payload == `It's a secret` || message.payload == `reward` ||message.payload == `cures hangover`) {
+            // if (survey_result.detail == null) {
+            //     survey_result.detail = message.payload
+                askMood(bot, message)
             // } else {
             //     bot.reply(message, answered_true_msg);     
             // }
-        
-    } else if (message.payload == 'Chicken Parmesan' || message.payload == 'Double Down' || message.payload == 'Fried Drumsticks' || message.payload == 'Chicken Nuggets' || message.payload == 'Veggies') {
-        
-            // if (survey_result.preference == null) {
-            //     survey_result.preference = message.payload
-                askHungry(bot, message)
-            // } else {
-            //     bot.reply(message, answered_true_msg);     
-            // }
+        } else if (message.payload == 'Chicken Parmesan' || message.payload == 'Double Down' || message.payload == 'Fried Drumsticks' || message.payload == 'Chicken Nuggets' || message.payload == 'Veggies') {
+            
+                // if (survey_result.preference == null) {
+                //     survey_result.preference = message.payload
+                    askHungry(bot, message)
+                // } else {
+                //     bot.reply(message, answered_true_msg);     
+                // }
 
-    } else if (message.payload == 'yes' || message.payload == 'no' || message.payload == 'no(survey)') {
-        
-            // if (survey_result.hungry == null) {
-            //     survey_result.hungry = message.payload
-                sayThanks(bot, message)
-            // } else if (survey_result == {}){
-            // bot.reply(message, answered_true_msg); 
-            // }
-    }
+        } else if (message.payload == 'yes' || message.payload == 'no' || message.payload == 'no(survey)') {
+            
+                // if (survey_result.hungry == null) {
+                //     survey_result.hungry = message.payload
+                    sayThanks(bot, message)
+                // } else if (survey_result == {}){
+                // bot.reply(message, answered_true_msg); 
+                // }
+        }
+    });
 });
 
 //QUESTIONS
@@ -334,35 +331,6 @@ askMood = function(bot, message) {
             }
         });
      });
-    // var attachment = {
-    //     'type':'template',
-    //     'payload':{
-    //         'template_type':'button',
-    //         'text': 'What is your current mood ?',
-    //         'buttons':[
-    //             {
-    //             'type':'postback',
-    //             'title':`:)`,
-    //             'payload':`:)`
-    //             },
-    //             {
-    //             'type':'postback',
-    //             'title':`:(`,
-    //             'payload':`:(`
-    //             },
-    //             {
-    //             'type':'postback',
-    //             'title':`-_-`,
-    //             'payload':`-_-`
-    //             }
-    //         ]
-    //     }
-    // };
-
-    // bot.reply(message, {
-    //     attachment: attachment,
-    // });
-
 }
 
 askPreference = function(bot, message) {
