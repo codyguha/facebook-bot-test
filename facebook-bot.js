@@ -21,8 +21,9 @@ saveToMongoDb = function (v, k) {
     mongodb.MongoClient.connect(process.env.MONGODB_URI, function(err, db) {
         if (err) throw err;
         var results = db.collection('results');
+        var key = k;
         results.insert({
-          k: v
+          key: v
         })
     })
 }
