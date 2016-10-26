@@ -12,6 +12,7 @@
     "node": "4.1.1"
   },
   "dependencies": {
-    "mongodb": "^2.2.11"
+    "mongodb": "^2.2.11",
+    "request": "^2.76.0"
   }
 }

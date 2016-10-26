@@ -1,5 +1,6 @@
 var Botkit = require('botkit/lib/Botkit.js');
 var mongodb = require('mongodb');
+const request = require('request');
 
 var controller = Botkit.facebookbot({
     debug: true,
