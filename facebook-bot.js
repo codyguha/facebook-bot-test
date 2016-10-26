@@ -51,7 +51,7 @@ getProfile = function (id, cb) {
       method: 'GET',
       uri: `https://graph.facebook.com/v2.6/${id}`,
       qs: {
-        fields: 'id, first_name,last_name,profile_pic,gender,locale,timezone',
+        fields: 'first_name,last_name,profile_pic,gender,locale,timezone',
         access_token: process.env.page_token
       },
       json: true
@@ -66,7 +66,7 @@ getProfile = function (id, cb) {
 controller.hears(['hi'], 'message_received', function(bot, message) {
     bot.reply(message, 'Hello user !');
     getProfile(message.user, function(err, profile) {
-            saveUserToMongoDb(`${profile.id}`,`${profile.first_name}`, `${profile.last_name}`, `${profile.gender}`, `${profile.locale}`, `${profile.timezone}`)
+            saveUserToMongoDb(`${message.user}`,`${profile.first_name}`, `${profile.last_name}`, `${profile.gender}`, `${profile.locale}`, `${profile.timezone}`)
         });
 });
 
