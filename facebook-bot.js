@@ -32,7 +32,7 @@ saveUserToMongoDb = function (first_name, last_name, gender, locale, timezone) {
         results.insert({
             user:{
                 first_name: first_name,
-                last_name: last_name
+                last_name: last_name,
                 gender: gender,
                 locale: locale,
                 timezone: timezone
