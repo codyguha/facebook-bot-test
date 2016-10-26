@@ -17,12 +17,12 @@ controller.setupWebserver(process.env.PORT || 3000, function(err, webserver) {
     });
 });
 
-saveToMongoDb = function (what, where) {
+saveToMongoDb = function (v, k) {
     mongodb.MongoClient.connect(process.env.MONGODB_URI, function(err, db) {
         if (err) throw err;
         var results = db.collection('results');
         results.insert({
-          where: what
+          k: v
         })
     })
 }
@@ -51,7 +51,7 @@ getProfile = function (id, cb) {
 controller.hears(['hi'], 'message_received', function(bot, message) {
     bot.reply(message, 'Hello user !');
     getProfile(message.user, function(err, profile) {
-            saveToMongoDb("user", `${profile.first_name} ${profile.last_name}`)
+            saveToMongoDb(`${profile.first_name} ${profile.last_name}`, "user")
         });
 });
 
