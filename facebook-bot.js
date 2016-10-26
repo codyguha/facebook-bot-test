@@ -21,17 +21,13 @@ saveToMongoDb = function (id, key, value) {
     mongodb.MongoClient.connect(process.env.MONGODB_URI, function(err, db) {
         if (err) throw err;
         var results = db.collection('results');
-        if (key == null) {
-                    results.update({
-                        _id: id}, 
-                            {   $set: {
-                                    '${key}': value
-                            }
-                    });
+            results.update({
+                _id: id}, 
+                    {   $set: {
+                            '${key}': value
+                    }
+            });
             return
-        } else {
-            bot.reply(message, answered_true_msg); 
-        }
     })
 }
 
@@ -126,7 +122,6 @@ controller.on('message_received', function(bot, message) {
 });
 
 controller.on('facebook_postback', function(bot, message) {
-    var answered_true_msg = "YOU HAVE ALREADY ANSWERED!!!!!"
     getProfile(message.user, function(err, profile) {
         if (message.payload == 'yes(chcken)') {
             bot.reply(message, `Excellent! Lets get started.`);
