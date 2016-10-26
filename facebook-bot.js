@@ -146,7 +146,7 @@ controller.hears(['help'], 'message_received', function(bot, message) {
 });
 
 controller.on('message_received', function(bot, message) {
-    console.log(message)
+    console.log(String(message.text))
 });
 
 controller.on('facebook_postback', function(bot, message) {
