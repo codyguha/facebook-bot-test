@@ -141,12 +141,13 @@ controller.hears(['yop'], 'message_received', function(bot, message) {
                 'template_type': 'generic',
                 'elements': [
                     {
-                        'title': `Option1`,
+                        'title': `Option 1`,
+                        'subtitle': `Select the option that best suits you`,
                         'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/Untitled%20drawing.jpg',
                         'buttons': [
                             {
                                 'type': 'postback',
-                                'title': 'choose',
+                                'title': 'Select',
                                 'payload': 'q01_r_01'
                             }
                         ]
