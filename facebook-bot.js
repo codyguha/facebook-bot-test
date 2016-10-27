@@ -1281,4 +1281,5 @@ cndValEnd = function (bot, message) {
 
           var userresults = found[0].canadian_values_survey;
           console.log(userresults)
+      });
 }
