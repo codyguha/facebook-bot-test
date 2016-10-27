@@ -141,9 +141,8 @@ controller.hears(['yop'], 'message_received', function(bot, message) {
                 'template_type': 'generic',
                 'elements': [
                     {
-                        'title': ` `,
+                        'title': `Option 1`,
                         'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q01_r01.png',
-                        'subtitle': `select the option that best suits you`,
                         'buttons': [
                             {
                                 'type': 'postback',
@@ -153,8 +152,7 @@ controller.hears(['yop'], 'message_received', function(bot, message) {
                         ]
                     },
                     {
-                        'title': ` `,
-                        'subtitle': `select the option that best suits you`,
+                        'title': `Option 2`,
                         'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q01_r02.png',
                         'buttons': [
                             {
