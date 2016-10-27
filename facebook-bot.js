@@ -147,18 +147,19 @@ controller.hears(['yop'], 'message_received', function(bot, message) {
                         'buttons': [
                             {
                                 'type': 'postback',
-                                'title': 'Select',
+                                'title': 'Choose',
                                 'payload': 'q01_r_01'
                             }
                         ]
                     },
                     {
-                        'title': `More recognition of the importance of traditional families where a man is married to a woman`,
-                        'image_url': 'http://www.stevensonfitness.com/wp-content/uploads/2014/10/veggies.jpg',
+                        'title': `Option 2`,
+                        'subtitle': `select the option that best suits you`,
+                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q01_r02.png',
                         'buttons': [
                             {
                                 'type': 'postback',
-                                'title': 'choose',
+                                'title': 'Choose',
                                 'payload': '2'
                             }
                         ]
