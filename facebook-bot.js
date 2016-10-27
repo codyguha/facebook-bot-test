@@ -142,8 +142,8 @@ controller.hears(['yop'], 'message_received', function(bot, message) {
                 'elements': [
                     {
                         'title': `Option 1`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/Untitled%20drawing.jpg',
-                        'subtitle': `Select the option that best suits you`,
+                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q01_r01.png',
+                        'subtitle': `select the option that best suits you`,
                         'buttons': [
                             {
                                 'type': 'postback',
