@@ -437,7 +437,7 @@ canadianValuesSurvey = function(bot, message) {
                 },
                 {
                 'type':'postback',
-                'title':`no thanks`,
+                'title':`No Thanks`,
                 'payload':`no`
                 }
             ]
@@ -1275,6 +1275,9 @@ cndValQ15 = function(bot, message) {
 }
 
 cndValEnd = function (bot, message) {
+    mongodb.MongoClient.connect(process.env.MONGODB_URI, function(err, db) {
+        if (err) throw err;
+    var results = db.collection('results');
     results.find({
           _id: message.user
         }).toArray(function(err, found) {
@@ -1282,4 +1285,5 @@ cndValEnd = function (bot, message) {
           var userresults = found[0].canadian_values_survey;
           console.log(userresults)
       });
+    });
 }
