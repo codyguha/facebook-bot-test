@@ -295,24 +295,24 @@ controller.on('message_received', function(bot, message) {
 
 controller.on('facebook_postback', function(bot, message) {
     getProfile(message.user, function(err, profile) {
-        if (message.payload == 'yes(chcken)') {
+        if (message.payload === 'yes(chcken)') {
             bot.reply(message, `Chicken you say ? Lets get started.`);
             askRelationship(bot, message)
-        } else if (message.payload == 'I love it' || message.payload == 'I hate it' || message.payload == 'Guilty pleasure') {
+        } else if (message.payload === 'I love it' || message.payload === 'I hate it' || message.payload === 'Guilty pleasure') {
             saveToMongoDb(message.user, message.payload, "relationship")
             askDetail(bot, message)
-        } else if (message.payload == 'I make it myself' || message.payload == 'KFC is my go to' || message.payload == 'Any way is good' || message.payload == 'Fried food is gross' || message.payload == `I don't eat animals` || message.payload == `It's a secret` || message.payload == `reward` ||message.payload == `cures hangover`) {
+        } else if (message.payload === 'I make it myself' || message.payload === 'KFC is my go to' || message.payload === 'Any way is good' || message.payload === 'Fried food is gross' || message.payload === `I don't eat animals` || message.payload === `It's a secret` || message.payload === `reward` ||message.payload === `cures hangover`) {
             saveToMongoDb(message.user, message.payload, "detail")
             askMood(bot, message)
-        } else if (message.payload == 'Chicken Parmesan' || message.payload == 'Double Down' || message.payload == 'Fried Drumsticks' || message.payload == 'Chicken Nuggets' || message.payload == 'Veggies') {
+        } else if (message.payload === 'Chicken Parmesan' || message.payload === 'Double Down' || message.payload === 'Fried Drumsticks' || message.payload === 'Chicken Nuggets' || message.payload === 'Veggies') {
             saveToMongoDb(message.user, message.payload, "preference")
             askHungry(bot, message)
-        } else if (message.payload == 'yes' || message.payload == 'no' || message.payload == 'no(survey)') {
+        } else if (message.payload === 'yes' || message.payload === 'no' || message.payload === 'no(survey)') {
             saveToMongoDb(message.user, message.payload, "hungry")
             sayThanks(bot, message)
-        } else if (message.payload == 'yes(cndval)') {
+        } else if (message.payload === 'yes(cndval)') {
             canadianValuesSurvey(bot, message);
-        } else if (message.payload == `get started canadian`) {
+        } else if (message.payload === `get started canadian`) {
             cndValQ01(bot, message);
         } else if (message.payload === `q01_r01` || message.payload === `q01_r02`) {
             if (message.payload === `q01_r01`){
