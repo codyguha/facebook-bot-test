@@ -1281,9 +1281,105 @@ cndValEnd = function (bot, message) {
     results.find({
           _id: message.user
         }).toArray(function(err, found) {
-
           var userresults = found[0].canadian_values_survey;
           console.log(userresults)
+            var segCS = Math.exp(
+            1.324777341 * userresults.q01 +
+            -0.439317293 * userresults.q02 +
+            -1.141955791 * userresults.q03 +
+            0.946527238 * userresults.q04 +
+            1.065909437 * userresults.q05 +
+            1.856962384 * userresults.q06 +
+            0.313054006 * userresults.q07 +
+            0.335923336 * userresults.q08 +
+            -0.822735827 * userresults.q09 +
+            1.418703947 * userresults.q10 +
+            -0.705176968 * userresults.q11 +
+            -1.339674474 * userresults.q12 +
+            0.990574065 * userresults.q13 +
+            3.17706193 * userresults.q14 +
+            -3.538568365 * userresults.q15 +
+            -3.687443765);
+
+          var segPR = Math.exp(
+            0.360924702 * userresults.q01 +
+            -4.778865322 * userresults.q02 +
+            -0.096688666 * userresults.q03 +
+            1.556509672 * userresults.q04 +
+            2.000184421 * userresults.q05 +
+            0.052231303 * userresults.q06 +
+            -1.892051762 * userresults.q07 +
+            0.873597825 * userresults.q08 +
+            -1.024131769 * userresults.q09 +
+            1.058972973 * userresults.q10 +
+            1.387828058 * userresults.q11 +
+            -1.645821049 * userresults.q12 +
+            4.147904236 * userresults.q13 +
+            2.471886731 * userresults.q14 +
+            -1.551020565 * userresults.q15 +
+            -3.344123223);
+
+          var segFBT = Math.exp(
+            1.937264942 * userresults.q01 +
+            -2.782925459 * userresults.q02 +
+            2.014814213 * userresults.q03 +
+            1.738605214 * userresults.q04 +
+            0.59702853 * userresults.q05 +
+            0.847449727 * userresults.q06 +
+            -0.706492853 * userresults.q07 +
+            1.961100828 * userresults.q08 +
+            -1.677824254 * userresults.q09 +
+            1.768624728 * userresults.q10 +
+            3.445928658 * userresults.q11 +
+            -0.138628647 * userresults.q12 +
+            0.746561782 * userresults.q13 +
+            1.871286665 * userresults.q14 +
+            -2.419686983 * userresults.q15 +
+            -11.1287024);
+
+          var segFEE = Math.exp(
+            1.029244103 * userresults.q01 +
+            -1.496981598 * userresults.q02 +
+            -1.196622034 * userresults.q03 +
+            2.94630191 * userresults.q04 +
+            -0.551662564 * userresults.q05 +
+            1.775545107 * userresults.q06 +
+            1.01564184 * userresults.q07 +
+            1.850206979 * userresults.q08 +
+            -2.918294699 * userresults.q09 +
+            2.858187827 * userresults.q10 +
+            -0.233789783 * userresults.q11 +
+            0.454961524 * userresults.q12 +
+            2.491671372 * userresults.q13 +
+            0.997044403 * userresults.q14 +
+            -1.273910456 * userresults.q15 +
+            -10.76338147);
+
+          console.log("segCS: " + segCS)
+          console.log("segPR: " + segPR)
+          console.log("segFBT: " + segFBT)
+          console.log("segFEE: " + segFEE)
+        switch (Math.max(segCS, segPR, segFBT, segFEE, 1)) {
+            case segCS:
+                bot.reply(message, `You are a Cautious Skeptic!`);
+              break;
+            case segPR:
+                bot.reply(message, `You are a Permissive Reformer!`);
+              break;
+            case segFBT:
+                bot.reply(message, `You are a Faith Based Traditionalist!`);
+              break;
+            case segFEE:
+                bot.reply(message, `You are a Free Enterprise Enthusiast!`);
+              break;
+            case 1:
+                bot.reply(message, `You are a Public Sector Proponent!`);
+              break;
+            default:
+              const message = Bot.Message.text(`oops!`)
+              return incoming.reply(message)
+              break;
+          }
       });
     });
 }
