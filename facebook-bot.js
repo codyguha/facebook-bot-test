@@ -428,7 +428,7 @@ canadianValuesSurvey = function(bot, message) {
         'type':'template',
         'payload':{
             'template_type':'button',
-            'text': `The Angus Reid Institute's national poll conducted in partnership with the CBC identifies five Canadian mindsets when it comes to values.  Please choose one answer for each of the following questions on a broad range of topics in Canadian life.  Your answers will determine with which of the five mindsets you are most aligned.`,
+            'text': `The Angus Reid Institute's national poll conducted in partnership with the CBC identifies five Canadian mindsets when it comes to values.  Your answers will determine with which of the five mindsets you are most aligned.`,
             'buttons':[
                 {
                 'type':'postback',
