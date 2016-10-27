@@ -62,16 +62,14 @@ saveToMongoDb = function (id, value, key) {
                     {   $set: {
                             "canadian_values_survey.q01": value
                     }
-            });
-            cndValQ02(bot, message);    
+            });    
         } else if (key === "q02"){
             results.update({
                 _id: `${id}`}, 
                     {   $set: {
                             "canadian_values_survey.q02": value
                     }
-            });
-            cndValQ03(bot, message);
+            });    
         } else if (key === "q03"){
             results.update({
                 _id: `${id}`}, 
@@ -322,14 +320,14 @@ controller.on('facebook_postback', function(bot, message) {
             } else {
                 saveToMongoDb(message.user, 2, "q01")
             }
-            
+            cndValQ02(bot, message);
         } else if (message.payload == `q02_r01` || message.payload == `q02_r02`) {
             if (message.payload == `q02_r01`){
                 saveToMongoDb(message.user, 1, "q02")
             } else {
                 saveToMongoDb(message.user, 2, "q02")
             }
-            
+            cndValQ03(bot, message);
         } else if (message.payload == `q03_r01` || message.payload == `q03_r02`) {
             if (message.payload == `q03_r01`){
                 saveToMongoDb(message.user, 1, "q03")
