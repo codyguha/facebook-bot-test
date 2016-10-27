@@ -376,42 +376,42 @@ controller.on('facebook_postback', function(bot, message) {
             } else {
                 saveToMongoDb(message.user, 2, "q09")
             }
-            cndValQ10(bot, message);
+            cndValQ010(bot, message);
         } else if (message.payload == `q10_r01` || message.payload == `q10_r02`) {
             if (message.payload == `q10_r01`){
                 saveToMongoDb(message.user, 1, "q10")
             } else {
                 saveToMongoDb(message.user, 2, "q10")
             }
-            cndValQ11(bot, message);
+            cndValQ011(bot, message);
         } else if (message.payload == `q11_r01` || message.payload == `q11_r02`) {
             if (message.payload == `q11_r01`){
                 saveToMongoDb(message.user, 1, "q11")
             } else {
                 saveToMongoDb(message.user, 2, "q11")
             }
-            cndValQ12(bot, message);
+            cndValQ012(bot, message);
         } else if (message.payload == `q12_r01` || message.payload == `q12_r02`) {
             if (message.payload == `q12_r01`){
                 saveToMongoDb(message.user, 1, "q12")
             } else {
                 saveToMongoDb(message.user, 2, "q12")
             }
-            cndValQ13(bot, message);
+            cndValQ013(bot, message);
         } else if (message.payload == `q13_r01` || message.payload == `q13_r02`) {
             if (message.payload == `q13_r01`){
                 saveToMongoDb(message.user, 1, "q13")
             } else {
                 saveToMongoDb(message.user, 2, "q13")
             }
-            cndValQ14(bot, message);
+            cndValQ014(bot, message);
         } else if (message.payload == `q14_r01` || message.payload == `q14_r02`) {
             if (message.payload == `q14_r01`){
                 saveToMongoDb(message.user, 1, "q14")
             } else {
                 saveToMongoDb(message.user, 2, "q14")
             }
-            cndValQ15(bot, message);
+            cndValQ015(bot, message);
         } else if (message.payload == `q15_r01` || message.payload == `q15_r02`) {
             if (message.payload == `q15_r01`){
                 saveToMongoDb(message.user, 1, "q15")
@@ -1046,7 +1046,7 @@ cndValQ09 = function(bot, message) {
     });
 
 }
-cndValQ10 = function(bot, message) {
+cndValQ010 = function(bot, message) {
     bot.reply(message, `(10/15) On childcare, would you say...`);
     var attachment = {
         'type':'template',
@@ -1084,7 +1084,7 @@ cndValQ10 = function(bot, message) {
     });
 
 }
-cndValQ11 = function(bot, message) {
+cndValQ011 = function(bot, message) {
     bot.reply(message, `(11/15) When it comes to doctor-assisted dying...`);
     var attachment = {
         'type':'template',
@@ -1122,7 +1122,7 @@ cndValQ11 = function(bot, message) {
     });
 
 }
-cndValQ12 = function(bot, message) {
+cndValQ012 = function(bot, message) {
     bot.reply(message, `(12/15) Do you think of Canada's oil industry in Alberta and other parts of the country as:`);
     var attachment = {
         'type':'template',
@@ -1160,7 +1160,7 @@ cndValQ12 = function(bot, message) {
     });
 
 }
-cndValQ13 = function(bot, message) {
+cndValQ013 = function(bot, message) {
     bot.reply(message, `(13/15) Please indicate which one you think is more important for a child to have:`);
     var attachment = {
         'type':'template',
@@ -1198,7 +1198,7 @@ cndValQ13 = function(bot, message) {
     });
 
 }
-cndValQ14 = function(bot, message) {
+cndValQ014 = function(bot, message) {
     bot.reply(message, `(14/15) In terms of individual success, would you say:`);
     var attachment = {
         'type':'template',
@@ -1236,7 +1236,7 @@ cndValQ14 = function(bot, message) {
     });
 
 }
-cndValQ15 = function(bot, message) {
+cndValQ015 = function(bot, message) {
     bot.reply(message, `(15/15) In your view:`);
     var attachment = {
         'type':'template',
@@ -1275,6 +1275,7 @@ cndValQ15 = function(bot, message) {
 }
 
 cndValEnd = function (bot, message) {
+    bot.reply(message, `You are a Cautious Skeptic!`);
     mongodb.MongoClient.connect(process.env.MONGODB_URI, function(err, db) {
         if (err) throw err;
     var results = db.collection('results');
@@ -1354,32 +1355,31 @@ cndValEnd = function (bot, message) {
             0.997044403 * userresults.q14 +
             -1.273910456 * userresults.q15 +
             -10.76338147);
-
-          console.log("segCS: " + segCS)
-          console.log("segPR: " + segPR)
-          console.log("segFBT: " + segFBT)
-          console.log("segFEE: " + segFEE)
         switch (Math.max(segCS, segPR, segFBT, segFEE, 1)) {
             case segCS:
-                bot.reply(message, `You are a Cautious Skeptic!`);
+                
               break;
             case segPR:
-                bot.reply(message, `You are a Permissive Reformer!`);
+                
               break;
             case segFBT:
-                bot.reply(message, `You are a Faith Based Traditionalist!`);
+                
               break;
             case segFEE:
-                bot.reply(message, `You are a Free Enterprise Enthusiast!`);
+                
               break;
             case 1:
-                bot.reply(message, `You are a Public Sector Proponent!`);
+                
               break;
             default:
-              const message = Bot.Message.text(`oops!`)
-              return incoming.reply(message)
               break;
           }
       });
     });
 }
+
+// bot.reply(message, `You are a Cautious Skeptic!`);
+// bot.reply(message, `You are a Permissive Reformer!`);
+// bot.reply(message, `You are a Faith Based Traditionalist!`);
+// bot.reply(message, `You are a Free Enterprise Enthusiast!`);
+// bot.reply(message, `You are a Public Sector Proponent!`);
