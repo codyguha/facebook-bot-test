@@ -141,7 +141,7 @@ controller.hears(['yop'], 'message_received', function(bot, message) {
                 'template_type': 'generic',
                 'elements': [
                     {
-                        'title': `Option`,
+                        'title': `Option1`,
                         'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/Untitled%20drawing.jpg',
                         'buttons': [
                             {
@@ -488,4 +488,565 @@ askHungry = function(bot, message) {
 // OTHER RESPONSES
 sayThanks = function(bot, message) {
   bot.reply(message, 'OK! thanks for your time');
+}
+
+// CANADIAN VALUES
+cndValQ01 = function(bot, message) {
+  bot.reply(message, `(1/15) Canadian society should work towards...`);
+    var attachment = {
+        'type':'template',
+        'payload': {
+                'template_type': 'generic',
+                'elements': [
+                    {
+                        'title': `Option1`,
+                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/Untitled%20drawing.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': 'q01_r_01'
+                            }
+                        ]
+                    },
+                    {
+                        'title': `More recognition of the importance of traditional families where a man is married to a woman`,
+                        'image_url': 'http://www.stevensonfitness.com/wp-content/uploads/2014/10/veggies.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': '2'
+                            }
+                        ]
+                    }
+                ]
+            }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+}
+
+cndValQ02 = function(bot, message) {
+  bot.reply(message, `(1/15) Canadian society should work towards...`);
+    var attachment = {
+        'type':'template',
+        'payload': {
+                'template_type': 'generic',
+                'elements': [
+                    {
+                        'title': `Option1`,
+                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/Untitled%20drawing.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': 'q01_r_01'
+                            }
+                        ]
+                    },
+                    {
+                        'title': `More recognition of the importance of traditional families where a man is married to a woman`,
+                        'image_url': 'http://www.stevensonfitness.com/wp-content/uploads/2014/10/veggies.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': '2'
+                            }
+                        ]
+                    }
+                ]
+            }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+}
+
+cndValQ03 = function(bot, message) {
+  bot.reply(message, `(1/15) Canadian society should work towards...`);
+    var attachment = {
+        'type':'template',
+        'payload': {
+                'template_type': 'generic',
+                'elements': [
+                    {
+                        'title': `Option1`,
+                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/Untitled%20drawing.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': 'q01_r_01'
+                            }
+                        ]
+                    },
+                    {
+                        'title': `More recognition of the importance of traditional families where a man is married to a woman`,
+                        'image_url': 'http://www.stevensonfitness.com/wp-content/uploads/2014/10/veggies.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': '2'
+                            }
+                        ]
+                    }
+                ]
+            }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+}
+
+cndValQ04 = function(bot, message) {
+  bot.reply(message, `(1/15) Canadian society should work towards...`);
+    var attachment = {
+        'type':'template',
+        'payload': {
+                'template_type': 'generic',
+                'elements': [
+                    {
+                        'title': `Option1`,
+                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/Untitled%20drawing.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': 'q01_r_01'
+                            }
+                        ]
+                    },
+                    {
+                        'title': `More recognition of the importance of traditional families where a man is married to a woman`,
+                        'image_url': 'http://www.stevensonfitness.com/wp-content/uploads/2014/10/veggies.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': '2'
+                            }
+                        ]
+                    }
+                ]
+            }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+}
+
+cndValQ05 = function(bot, message) {
+  bot.reply(message, `(1/15) Canadian society should work towards...`);
+    var attachment = {
+        'type':'template',
+        'payload': {
+                'template_type': 'generic',
+                'elements': [
+                    {
+                        'title': `Option1`,
+                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/Untitled%20drawing.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': 'q01_r_01'
+                            }
+                        ]
+                    },
+                    {
+                        'title': `More recognition of the importance of traditional families where a man is married to a woman`,
+                        'image_url': 'http://www.stevensonfitness.com/wp-content/uploads/2014/10/veggies.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': '2'
+                            }
+                        ]
+                    }
+                ]
+            }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+}
+cndValQ06 = function(bot, message) {
+  bot.reply(message, `(1/15) Canadian society should work towards...`);
+    var attachment = {
+        'type':'template',
+        'payload': {
+                'template_type': 'generic',
+                'elements': [
+                    {
+                        'title': `Option1`,
+                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/Untitled%20drawing.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': 'q01_r_01'
+                            }
+                        ]
+                    },
+                    {
+                        'title': `More recognition of the importance of traditional families where a man is married to a woman`,
+                        'image_url': 'http://www.stevensonfitness.com/wp-content/uploads/2014/10/veggies.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': '2'
+                            }
+                        ]
+                    }
+                ]
+            }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+}
+cndValQ07 = function(bot, message) {
+  bot.reply(message, `(1/15) Canadian society should work towards...`);
+    var attachment = {
+        'type':'template',
+        'payload': {
+                'template_type': 'generic',
+                'elements': [
+                    {
+                        'title': `Option1`,
+                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/Untitled%20drawing.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': 'q01_r_01'
+                            }
+                        ]
+                    },
+                    {
+                        'title': `More recognition of the importance of traditional families where a man is married to a woman`,
+                        'image_url': 'http://www.stevensonfitness.com/wp-content/uploads/2014/10/veggies.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': '2'
+                            }
+                        ]
+                    }
+                ]
+            }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+}
+cndValQ08 = function(bot, message) {
+  bot.reply(message, `(1/15) Canadian society should work towards...`);
+    var attachment = {
+        'type':'template',
+        'payload': {
+                'template_type': 'generic',
+                'elements': [
+                    {
+                        'title': `Option1`,
+                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/Untitled%20drawing.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': 'q01_r_01'
+                            }
+                        ]
+                    },
+                    {
+                        'title': `More recognition of the importance of traditional families where a man is married to a woman`,
+                        'image_url': 'http://www.stevensonfitness.com/wp-content/uploads/2014/10/veggies.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': '2'
+                            }
+                        ]
+                    }
+                ]
+            }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+}
+cndValQ09 = function(bot, message) {
+  bot.reply(message, `(1/15) Canadian society should work towards...`);
+    var attachment = {
+        'type':'template',
+        'payload': {
+                'template_type': 'generic',
+                'elements': [
+                    {
+                        'title': `Option1`,
+                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/Untitled%20drawing.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': 'q01_r_01'
+                            }
+                        ]
+                    },
+                    {
+                        'title': `More recognition of the importance of traditional families where a man is married to a woman`,
+                        'image_url': 'http://www.stevensonfitness.com/wp-content/uploads/2014/10/veggies.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': '2'
+                            }
+                        ]
+                    }
+                ]
+            }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+}
+cndValQ10 = function(bot, message) {
+  bot.reply(message, `(1/15) Canadian society should work towards...`);
+    var attachment = {
+        'type':'template',
+        'payload': {
+                'template_type': 'generic',
+                'elements': [
+                    {
+                        'title': `Option1`,
+                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/Untitled%20drawing.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': 'q01_r_01'
+                            }
+                        ]
+                    },
+                    {
+                        'title': `More recognition of the importance of traditional families where a man is married to a woman`,
+                        'image_url': 'http://www.stevensonfitness.com/wp-content/uploads/2014/10/veggies.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': '2'
+                            }
+                        ]
+                    }
+                ]
+            }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+}
+cndValQ11 = function(bot, message) {
+  bot.reply(message, `(1/15) Canadian society should work towards...`);
+    var attachment = {
+        'type':'template',
+        'payload': {
+                'template_type': 'generic',
+                'elements': [
+                    {
+                        'title': `Option1`,
+                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/Untitled%20drawing.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': 'q01_r_01'
+                            }
+                        ]
+                    },
+                    {
+                        'title': `More recognition of the importance of traditional families where a man is married to a woman`,
+                        'image_url': 'http://www.stevensonfitness.com/wp-content/uploads/2014/10/veggies.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': '2'
+                            }
+                        ]
+                    }
+                ]
+            }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+}
+cndValQ12 = function(bot, message) {
+  bot.reply(message, `(1/15) Canadian society should work towards...`);
+    var attachment = {
+        'type':'template',
+        'payload': {
+                'template_type': 'generic',
+                'elements': [
+                    {
+                        'title': `Option1`,
+                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/Untitled%20drawing.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': 'q01_r_01'
+                            }
+                        ]
+                    },
+                    {
+                        'title': `More recognition of the importance of traditional families where a man is married to a woman`,
+                        'image_url': 'http://www.stevensonfitness.com/wp-content/uploads/2014/10/veggies.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': '2'
+                            }
+                        ]
+                    }
+                ]
+            }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+}
+cndValQ13 = function(bot, message) {
+  bot.reply(message, `(1/15) Canadian society should work towards...`);
+    var attachment = {
+        'type':'template',
+        'payload': {
+                'template_type': 'generic',
+                'elements': [
+                    {
+                        'title': `Option1`,
+                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/Untitled%20drawing.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': 'q01_r_01'
+                            }
+                        ]
+                    },
+                    {
+                        'title': `More recognition of the importance of traditional families where a man is married to a woman`,
+                        'image_url': 'http://www.stevensonfitness.com/wp-content/uploads/2014/10/veggies.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': '2'
+                            }
+                        ]
+                    }
+                ]
+            }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+}
+cndValQ14 = function(bot, message) {
+  bot.reply(message, `(1/15) Canadian society should work towards...`);
+    var attachment = {
+        'type':'template',
+        'payload': {
+                'template_type': 'generic',
+                'elements': [
+                    {
+                        'title': `Option1`,
+                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/Untitled%20drawing.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': 'q01_r_01'
+                            }
+                        ]
+                    },
+                    {
+                        'title': `More recognition of the importance of traditional families where a man is married to a woman`,
+                        'image_url': 'http://www.stevensonfitness.com/wp-content/uploads/2014/10/veggies.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': '2'
+                            }
+                        ]
+                    }
+                ]
+            }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+}
+cndValQ15 = function(bot, message) {
+  bot.reply(message, `(1/15) Canadian society should work towards...`);
+    var attachment = {
+        'type':'template',
+        'payload': {
+                'template_type': 'generic',
+                'elements': [
+                    {
+                        'title': `Option1`,
+                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/Untitled%20drawing.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': 'q01_r_01'
+                            }
+                        ]
+                    },
+                    {
+                        'title': `More recognition of the importance of traditional families where a man is married to a woman`,
+                        'image_url': 'http://www.stevensonfitness.com/wp-content/uploads/2014/10/veggies.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'choose',
+                                'payload': '2'
+                            }
+                        ]
+                    }
+                ]
+            }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
 }
