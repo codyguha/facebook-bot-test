@@ -139,6 +139,7 @@ controller.hears(['yop'], 'message_received', function(bot, message) {
         'type':'template',
         'payload': {
                 'template_type': 'generic',
+                'title': `(1/15) Canadian society should work towards...`,
                 'elements': [
                     {
                         'title': `Greater acceptance of people who are LGBTQ`,
@@ -146,8 +147,8 @@ controller.hears(['yop'], 'message_received', function(bot, message) {
                         'buttons': [
                             {
                                 'type': 'postback',
-                                'title': 'Option1',
-                                'payload': 'option1'
+                                'title': 'choose',
+                                'payload': 'option-1'
                             }
                         ]
                     },
@@ -157,8 +158,8 @@ controller.hears(['yop'], 'message_received', function(bot, message) {
                         'buttons': [
                             {
                                 'type': 'postback',
-                                'title': 'option2',
-                                'payload': 'option2'
+                                'title': 'choose',
+                                'payload': 'option-2'
                             }
                         ]
                     }
