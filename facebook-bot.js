@@ -98,46 +98,72 @@ getProfile = function (id, cb) {
     })
 }
 
-controller.hears(['hi'], 'message_received', function(bot, message) {
-    bot.reply(message, 'Hello user !');
+controller.hears(['hi', 'Hi'], 'message_received', function(bot, message) {
     getProfile(message.user, function(err, profile) {
-            saveUserToMongoDb(`${message.user}`,`${profile.first_name}`, `${profile.last_name}`, `${profile.gender}`, `${profile.locale}`, `${profile.timezone}`)
+        var attachment = {
+            'type':'template',
+            'payload':{
+                'template_type':'button',
+                'text': `Hello ${profile.first_name}, Please choose a survey to begin.`,
+                'buttons':[
+                    {
+                    'type':'postback',
+                    'title':`Chicken survey`,
+                    'payload':`yes(chcken)`
+                    },
+                    {
+                    'type':'postback',
+                    'title':`Canadian Values Index`,
+                    'payload':`yes(cndval)`
+                    },
+                    {
+                    'type':'postback',
+                    'title':`No thanks`,
+                    'payload':`no(survey)`
+                    },
+                ]
+            }
+        };
+        bot.reply(message, {
+            attachment: attachment,
         });
+        
+        saveUserToMongoDb(`${message.user}`,`${profile.first_name}`, `${profile.last_name}`, `${profile.gender}`, `${profile.locale}`, `${profile.timezone}`)
+    
+    });
 });
 
-controller.hears(['how are you?'], 'message_received', function(bot, message) {
-    bot.reply(message, "I'm great thanks for asking!");
-});
-
-controller.hears(['what can I do here?'], 'message_received', function(bot, message) {
-    bot.reply(message, "You can complete surveys with me to help me complete my research!");
-});
-
-controller.hears(['menu'], 'message_received', function(bot, message) {
+controller.hears(['yop'], 'message_received', function(bot, message) {
+    bot.reply(message, `(1/15) Canadian society should work towards...`);
     var attachment = {
         'type':'template',
-        'payload':{
-            'template_type':'button',
-            'text': 'Please choose a survey',
-            'buttons':[
-                {
-                'type':'postback',
-                'title':`Chicken survey`,
-                'payload':`yes(chcken)`
-                },
-                {
-                'type':'postback',
-                'title':`Canadian Values`,
-                'payload':`yes(cndval)`
-                },
-                {
-                'type':'postback',
-                'title':`No thanks`,
-                'payload':`no(survey)`
-                },
-
-            ]
-        }
+        'payload': {
+                'template_type': 'generic',
+                'elements': [
+                    {
+                        'title': `Greater acceptance of people who are LGBTQ`,
+                        'image_url': 'http://fiber-international.com/wp-content/uploads/2015/04/800x600-chicken.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'Option1',
+                                'payload': 'option1'
+                            }
+                        ]
+                    },
+                    {
+                        'title': `More recognition of the importance of traditional families where a man is married to a woman`,
+                        'image_url': 'http://www.stevensonfitness.com/wp-content/uploads/2014/10/veggies.jpg',
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'option2',
+                                'payload': 'option2'
+                            }
+                        ]
+                    }
+                ]
+            }
     };
 
     bot.reply(message, {
@@ -146,22 +172,26 @@ controller.hears(['menu'], 'message_received', function(bot, message) {
 
 });
 
+controller.hears(['what can I do here?'], 'message_received', function(bot, message) {
+    bot.reply(message, "You can complete surveys with me to help me complete my research!");
+});
+
 controller.hears(['help'], 'message_received', function(bot, message) {
-    bot.reply(message, "type 'menu' to see a list of surveys to complete. Or just say 'hi'.");
+    bot.reply(message, "type 'hi' to see a list of surveys to complete.");
 });
 
 controller.on('message_received', function(bot, message) {
     console.log(message)
 });
 
-controller.on('facebook_optin', function(bot, message) {
-    bot.reply(message, "YOU CLICKED PLUGIN !!!");
-});
+// controller.on('facebook_optin', function(bot, message) {
+//     bot.reply(message, "YOU CLICKED PLUGIN !!!");
+// });
 
 controller.on('facebook_postback', function(bot, message) {
     getProfile(message.user, function(err, profile) {
         if (message.payload == 'yes(chcken)') {
-            bot.reply(message, `Excellent! Lets get started.`);
+            bot.reply(message, `Chicken you say ? Lets get started.`);
             askRelationship(bot, message)
         } else if (message.payload == 'I love it' || message.payload == 'I hate it' || message.payload == 'Guilty pleasure') {
             saveToMongoDb(message.user, message.payload, "relationship")
@@ -175,27 +205,30 @@ controller.on('facebook_postback', function(bot, message) {
         } else if (message.payload == 'yes' || message.payload == 'no' || message.payload == 'no(survey)') {
             saveToMongoDb(message.user, message.payload, "hungry")
             sayThanks(bot, message)
+        } else if (message.payload == 'yes(cndval)') {
+            canadianValuesSurvey();
+        } else if (message.payload == `get started canadian`) {
+            question1();
         }
     });
 });
 
-//QUESTIONS
-askSurvey = function(bot, message) {
+canadianValuesSurvey = function(bot, message) {
     var attachment = {
         'type':'template',
         'payload':{
             'template_type':'button',
-            'text': 'Do you have a moment to answer some questions about fried chicken ?',
+            'text': `The Angus Reid Institute's national poll conducted in partnership with the CBC identifies five Canadian mindsets when it comes to values.  Please choose one answer for each of the following questions on a broad range of topics in Canadian life.  Your answers will determine with which of the five mindsets you are most aligned.`,
             'buttons':[
                 {
                 'type':'postback',
-                'title':`Yes`,
-                'payload':`yes(start)`
+                'title':`Get Started`,
+                'payload':`get started canadian`
                 },
                 {
                 'type':'postback',
-                'title':`No`,
-                'payload':`no(survey)`
+                'title':`no thanks`,
+                'payload':`no`
                 }
             ]
         }
@@ -205,6 +238,9 @@ askSurvey = function(bot, message) {
         attachment: attachment,
     });
 }
+
+
+//QUESTIONS
 
 askRelationship = function(bot, message) {
     var attachment = {
