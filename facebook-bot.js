@@ -314,106 +314,106 @@ controller.on('facebook_postback', function(bot, message) {
             canadianValuesSurvey(bot, message);
         } else if (message.payload == `get started canadian`) {
             cndValQ01(bot, message);
-        } else if (message.payload == `q01_r01` || message.payload == `q01_r02`) {
-            if (message.payload == `q01_r01`){
+        } else if (message.payload === `q01_r01` || message.payload === `q01_r02`) {
+            if (message.payload === `q01_r01`){
                 saveToMongoDb(message.user, 1, "q01")
             } else {
                 saveToMongoDb(message.user, 2, "q01")
             }
             cndValQ02(bot, message);
-        } else if (message.payload == `q02_r01` || message.payload == `q02_r02`) {
-            if (message.payload == `q02_r01`){
+        } else if (message.payload === `q02_r01` || message.payload === `q02_r02`) {
+            if (message.payload === `q02_r01`){
                 saveToMongoDb(message.user, 1, "q02")
             } else {
                 saveToMongoDb(message.user, 2, "q02")
             }
             cndValQ03(bot, message);
-        } else if (message.payload == `q03_r01` || message.payload == `q03_r02`) {
-            if (message.payload == `q03_r01`){
+        } else if (message.payload === `q03_r01` || message.payload === `q03_r02`) {
+            if (message.payload === `q03_r01`){
                 saveToMongoDb(message.user, 1, "q03")
             } else {
                 saveToMongoDb(message.user, 2, "q03")
             }
             cndValQ04(bot, message);
-        } else if (message.payload == `q04_r01` || message.payload == `q04_r02`) {
-            if (message.payload == `q04_r01`){
+        } else if (message.payload === `q04_r01` || message.payload === `q04_r02`) {
+            if (message.payload === `q04_r01`){
                 saveToMongoDb(message.user, 1, "q04")
             } else {
                 saveToMongoDb(message.user, 2, "q04")
             }
             cndValQ05(bot, message);
-        } else if (message.payload == `q05_r01` || message.payload == `q05_r02`) {
-            if (message.payload == `q05_r01`){
+        } else if (message.payload === `q05_r01` || message.payload === `q05_r02`) {
+            if (message.payload === `q05_r01`){
                 saveToMongoDb(message.user, 1, "q05")
             } else {
                 saveToMongoDb(message.user, 2, "q05")
             }
             cndValQ06(bot, message);
-        } else if (message.payload == `q06_r01` || message.payload == `q06_r02`) {
-            if (message.payload == `q06_r01`){
+        } else if (message.payload === `q06_r01` || message.payload === `q06_r02`) {
+            if (message.payload === `q06_r01`){
                 saveToMongoDb(message.user, 1, "q06")
             } else {
                 saveToMongoDb(message.user, 2, "q06")
             }
             cndValQ07(bot, message);
-        } else if (message.payload == `q07_r01` || message.payload == `q07_r02`) {
-            if (message.payload == `q07_r01`){
+        } else if (message.payload === `q07_r01` || message.payload === `q07_r02`) {
+            if (message.payload === `q07_r01`){
                 saveToMongoDb(message.user, 1, "q07")
             } else {
                 saveToMongoDb(message.user, 2, "q07")
             }
             cndValQ08(bot, message);
-        } else if (message.payload == `q08_r01` || message.payload == `q08_r02`) {
-            if (message.payload == `q08_r01`){
+        } else if (message.payload === `q08_r01` || message.payload === `q08_r02`) {
+            if (message.payload === `q08_r01`){
                 saveToMongoDb(message.user, 1, "q08")
             } else {
                 saveToMongoDb(message.user, 2, "q08")
             }
             cndValQ09(bot, message);
-        } else if (message.payload == `q09_r01` || message.payload == `q09_r02`) {
-            if (message.payload == `q09_r01`){
+        } else if (message.payload === `q09_r01` || message.payload === `q09_r02`) {
+            if (message.payload === `q09_r01`){
                 saveToMongoDb(message.user, 1, "q09")
             } else {
                 saveToMongoDb(message.user, 2, "q09")
             }
             cndValQ010(bot, message);
-        } else if (message.payload == `q10_r01` || message.payload == `q10_r02`) {
-            if (message.payload == `q10_r01`){
+        } else if (message.payload === `q10_r01` || message.payload === `q10_r02`) {
+            if (message.payload === `q10_r01`){
                 saveToMongoDb(message.user, 1, "q10")
             } else {
                 saveToMongoDb(message.user, 2, "q10")
             }
             cndValQ011(bot, message);
-        } else if (message.payload == `q11_r01` || message.payload == `q11_r02`) {
-            if (message.payload == `q11_r01`){
+        } else if (message.payload === `q11_r01` || message.payload === `q11_r02`) {
+            if (message.payload === `q11_r01`){
                 saveToMongoDb(message.user, 1, "q11")
             } else {
                 saveToMongoDb(message.user, 2, "q11")
             }
             cndValQ012(bot, message);
-        } else if (message.payload == `q12_r01` || message.payload == `q12_r02`) {
-            if (message.payload == `q12_r01`){
+        } else if (message.payload === `q12_r01` || message.payload === `q12_r02`) {
+            if (message.payload === `q12_r01`){
                 saveToMongoDb(message.user, 1, "q12")
             } else {
                 saveToMongoDb(message.user, 2, "q12")
             }
             cndValQ013(bot, message);
-        } else if (message.payload == `q13_r01` || message.payload == `q13_r02`) {
-            if (message.payload == `q13_r01`){
+        } else if (message.payload === `q13_r01` || message.payload === `q13_r02`) {
+            if (message.payload === `q13_r01`){
                 saveToMongoDb(message.user, 1, "q13")
             } else {
                 saveToMongoDb(message.user, 2, "q13")
             }
             cndValQ014(bot, message);
-        } else if (message.payload == `q14_r01` || message.payload == `q14_r02`) {
-            if (message.payload == `q14_r01`){
+        } else if (message.payload === `q14_r01` || message.payload === `q14_r02`) {
+            if (message.payload === `q14_r01`){
                 saveToMongoDb(message.user, 1, "q14")
             } else {
                 saveToMongoDb(message.user, 2, "q14")
             }
             cndValQ015(bot, message);
-        } else if (message.payload == `q15_r01` || message.payload == `q15_r02`) {
-            if (message.payload == `q15_r01`){
+        } else if (message.payload === `q15_r01` || message.payload === `q15_r02`) {
+            if (message.payload === `q15_r01`){
                 saveToMongoDb(message.user, 1, "q15")
             } else {
                 saveToMongoDb(message.user, 2, "q15")
@@ -484,7 +484,7 @@ askRelationship = function(bot, message) {
 }
 
 askDetail = function(bot, message) {
-    if (message.payload == 'I love it') {
+    if (message.payload === 'I love it') {
         var attachment = {
             'type':'template',
             'payload':{
@@ -514,7 +514,7 @@ askDetail = function(bot, message) {
             attachment: attachment,
         });
         
-    } else if (message.payload == 'I hate it') {
+    } else if (message.payload === 'I hate it') {
         var attachment = {
             'type':'template',
             'payload':{
