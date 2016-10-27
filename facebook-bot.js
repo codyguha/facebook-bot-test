@@ -1275,7 +1275,6 @@ cndValQ015 = function(bot, message) {
 }
 
 cndValEnd = function (bot, message) {
-    bot.reply(message, `You are a Cautious Skeptic!`);
     mongodb.MongoClient.connect(process.env.MONGODB_URI, function(err, db) {
         if (err) throw err;
     var results = db.collection('results');
@@ -1357,19 +1356,19 @@ cndValEnd = function (bot, message) {
             -10.76338147);
         switch (Math.max(segCS, segPR, segFBT, segFEE, 1)) {
             case segCS:
-                
+                cndValEndCS(bot, message)
               break;
             case segPR:
-                
+                cndValEndPR(bot, message)
               break;
             case segFBT:
-                
+                cndValEndFBT(bot, message)
               break;
             case segFEE:
-                
+                cndValEndFEE(bot, message)
               break;
             case 1:
-                
+                cndValEndPSP(bot, message)
               break;
             default:
               break;
@@ -1378,8 +1377,18 @@ cndValEnd = function (bot, message) {
     });
 }
 
-// bot.reply(message, `You are a Cautious Skeptic!`);
-// bot.reply(message, `You are a Permissive Reformer!`);
-// bot.reply(message, `You are a Faith Based Traditionalist!`);
-// bot.reply(message, `You are a Free Enterprise Enthusiast!`);
-// bot.reply(message, `You are a Public Sector Proponent!`);
+cndValEndCS = function (bot, message) {
+    bot.reply(message, `You are a Cautious Skeptic!`);
+}
+cndValEndPR = function (bot, message) {
+    bot.reply(message, `You are a Permissive Reformer!`);
+}
+cndValEndFBT = function (bot, message) {
+    bot.reply(message, `You are a Faith Based Traditionalist!`);
+}
+cndValEndFEE = function (bot, message) {
+    bot.reply(message, `You are a Free Enterprise Enthusiast!`);
+}
+cndValEndPSP = function (bot, message) {
+    bot.reply(message, `You are a Public Sector Proponent!`);
+}
