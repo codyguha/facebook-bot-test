@@ -139,16 +139,15 @@ controller.hears(['yop'], 'message_received', function(bot, message) {
         'type':'template',
         'payload': {
                 'template_type': 'generic',
-                'title': `(1/15) Canadian society should work towards...`,
                 'elements': [
                     {
-                        'title': `Greater acceptance of people who are LGBTQ`,
-                        'image_url': 'http://fiber-international.com/wp-content/uploads/2015/04/800x600-chicken.jpg',
+                        'title': `Option`,
+                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/Untitled%20drawing.jpg',
                         'buttons': [
                             {
                                 'type': 'postback',
                                 'title': 'choose',
-                                'payload': 'option-1'
+                                'payload': 'q01_r_01'
                             }
                         ]
                     },
@@ -159,7 +158,7 @@ controller.hears(['yop'], 'message_received', function(bot, message) {
                             {
                                 'type': 'postback',
                                 'title': 'choose',
-                                'payload': 'option-2'
+                                'payload': '2'
                             }
                         ]
                     }
