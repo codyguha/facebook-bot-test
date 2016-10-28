@@ -1378,22 +1378,22 @@ cndValEnd = function (bot, message) {
 }
 
 cndValEndCS = function (bot, message) {
-    bot.reply(message, `http://angusreid.org/cautious-skeptics`);
+    bot.reply(message, `read more at http://angusreid.org/cautious-skeptics`);
     bot.reply(message, `That's it ! You are a Cautious Skeptic!`);
 }
 cndValEndPR = function (bot, message) {
-        bot.reply(message, `http://angusreid.org/permissive-reformers/`);
+        bot.reply(message, `read more at http://angusreid.org/permissive-reformers/`);
     bot.reply(message, `That's it ! You are a Permissive Reformer!`);
 }
 cndValEndFBT = function (bot, message) {
-        bot.reply(message, `http://angusreid.org/faith-based-traditionalists`);
+        bot.reply(message, `read more at http://angusreid.org/faith-based-traditionalists`);
     bot.reply(message, `That's it ! You are a Faith Based Traditionalist!`);
 }
 cndValEndFEE = function (bot, message) {
-        bot.reply(message, `http://angusreid.org/free-enterprise-enthusiasts`);
+        bot.reply(message, `read more at http://angusreid.org/free-enterprise-enthusiasts`);
     bot.reply(message, `That's it ! You are a Free Enterprise Enthusiast!`);
 }
 cndValEndPSP = function (bot, message) {
-        bot.reply(message, `http://angusreid.org/public-sector-proponents`);
+        bot.reply(message, `read more at http://angusreid.org/public-sector-proponents`);
     bot.reply(message, `That's it ! You are a Public Sector Proponent!`);
 }
