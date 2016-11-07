@@ -25,104 +25,104 @@ const SURVEY = [
                     r_01: "Keep God and religion completely out of public life",
                     img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
                     r_02: "Publicly celebrate the role of faith in our collective lives",
-                    pl_code_01: "q02_r01",
-                    pl_code_02: "q02_r02"
+                    pl_code_01: "q03_r01",
+                    pl_code_02: "q03_r02"
                 },{
                     text: "(4/15) In Canada, we should...",
-                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q04_r01.png",
                     r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q04_r02.jpeg",
                     r_02: "Publicly celebrate the role of faith in our collective lives",
-                    pl_code_01: "q02_r01",
-                    pl_code_02: "q02_r02"
+                    pl_code_01: "q04_r01",
+                    pl_code_02: "q04_r02"
                 },{
                     text: "(5/15) In Canada, we should...",
-                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q05_r01.jpg",
                     r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q05_r02.jpeg",
                     r_02: "Publicly celebrate the role of faith in our collective lives",
-                    pl_code_01: "q02_r01",
-                    pl_code_02: "q02_r02"
+                    pl_code_01: "q05_r01",
+                    pl_code_02: "q05_r02"
                 },{
                     text: "(6/15) In Canada, we should...",
-                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q06_r01.jpg",
                     r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q06_r02.jpeg",
                     r_02: "Publicly celebrate the role of faith in our collective lives",
-                    pl_code_01: "q02_r01",
-                    pl_code_02: "q02_r02"
+                    pl_code_01: "q06_r01",
+                    pl_code_02: "q06_r02"
                 },{
                     text: "(7/15) In Canada, we should...",
-                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q07_r01.jpg",
                     r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q07_r02.jpeg",
                     r_02: "Publicly celebrate the role of faith in our collective lives",
-                    pl_code_01: "q02_r01",
-                    pl_code_02: "q02_r02"
+                    pl_code_01: "q07_r01",
+                    pl_code_02: "q07_r02"
                 },{
                     text: "(8/15) In Canada, we should...",
-                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q08_r01.jpg",
                     r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q08_r02.jpeg",
                     r_02: "Publicly celebrate the role of faith in our collective lives",
-                    pl_code_01: "q02_r01",
-                    pl_code_02: "q02_r02"
+                    pl_code_01: "q08_r01",
+                    pl_code_02: "q08_r02"
                 },{
                     text: "(9/15) In Canada, we should...",
-                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q09_r01.png",
                     r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q09_r02.jpeg",
                     r_02: "Publicly celebrate the role of faith in our collective lives",
-                    pl_code_01: "q02_r01",
-                    pl_code_02: "q02_r02"
+                    pl_code_01: "q09_r01",
+                    pl_code_02: "q09_r02"
                 },{
                     text: "(10/15) In Canada, we should...",
-                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q10_r01.jpg",
                     r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q10_r02.jpeg",
                     r_02: "Publicly celebrate the role of faith in our collective lives",
-                    pl_code_01: "q02_r01",
-                    pl_code_02: "q02_r02"
+                    pl_code_01: "q10_r01",
+                    pl_code_02: "q10_r02"
                 },{
                     text: "(11/15) In Canada, we should...",
-                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q11_r01.jpg",
                     r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q11_r02.jpeg",
                     r_02: "Publicly celebrate the role of faith in our collective lives",
-                    pl_code_01: "q02_r01",
-                    pl_code_02: "q02_r02"
+                    pl_code_01: "q11_r01",
+                    pl_code_02: "q11_r02"
                 },{
                     text: "(12/15) In Canada, we should...",
-                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q12_r01.jpg",
                     r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q12_r02.jpeg",
                     r_02: "Publicly celebrate the role of faith in our collective lives",
-                    pl_code_01: "q02_r01",
-                    pl_code_02: "q02_r02"
+                    pl_code_01: "q12_r01",
+                    pl_code_02: "q12_r02"
                 },{
                     text: "(13/15) In Canada, we should...",
-                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q13_r01.jpg",
                     r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q13_r02.jpeg",
                     r_02: "Publicly celebrate the role of faith in our collective lives",
-                    pl_code_01: "q02_r01",
-                    pl_code_02: "q02_r02"
+                    pl_code_01: "q13_r01",
+                    pl_code_02: "q13_r02"
                 },{
                     text: "(14/15) In Canada, we should...",
-                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q14_r01.jpg",
                     r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q14_r02.jpeg",
                     r_02: "Publicly celebrate the role of faith in our collective lives",
-                    pl_code_01: "q02_r01",
-                    pl_code_02: "q02_r02"
+                    pl_code_01: "q14_r01",
+                    pl_code_02: "q14_r02"
                 },{
                     text: "(15/15) In Canada, we should...",
-                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q15_r01.jpg",
                     r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q15_r02.jpeg",
                     r_02: "Publicly celebrate the role of faith in our collective lives",
-                    pl_code_01: "q02_r01",
-                    pl_code_02: "q02_r02"
+                    pl_code_01: "q15_r01",
+                    pl_code_02: "q15_r02"
                 }
 
             ]
@@ -184,10 +184,10 @@ saveToMongoDb = function (id, value, key) {
                     }
             });    
         } else {
-            var g = "canadian_values_survey." + key
-            var obj = {};
-            obj[g] = value
-            results.update({_id: `${id}`}, {   $set:  obj }); 
+            var target_key = "canadian_values_survey." + key
+            var target = {};
+            target[target_key] = value
+            results.update({_id: `${id}`}, {   $set:  target }); 
         }
     })
 }
