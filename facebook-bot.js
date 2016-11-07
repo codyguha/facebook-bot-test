@@ -28,99 +28,99 @@ const SURVEY = [
                     pl_code_01: "q03_r01",
                     pl_code_02: "q03_r02"
                 },{
-                    text: "(4/15) In Canada, we should...",
+                    text: "(4/15) In the Canadian workplace:",
                     img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q04_r01.png",
-                    r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q04_r02.jpeg",
-                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    r_01: "Large public companies should be required to recruit and hire women",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q04_r02.jpg",
+                    r_02: "Leave it up to large public companies to make their own hiring decisions",
                     pl_code_01: "q04_r01",
                     pl_code_02: "q04_r02"
                 },{
-                    text: "(5/15) In Canada, we should...",
+                    text: "(5/15) Regarding health care, we should...",
                     img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q05_r01.jpg",
-                    r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q05_r02.jpeg",
-                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    r_01: "Encourage private medical clinics outside of the public health care system",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q05_r02.jpg",
+                    r_02: "Prohibit private medical clinics outside of the public health care system",
                     pl_code_01: "q05_r01",
                     pl_code_02: "q05_r02"
                 },{
-                    text: "(6/15) In Canada, we should...",
+                    text: "(6/15) Canada should...",
                     img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q06_r01.jpg",
-                    r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q06_r02.jpeg",
-                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    r_01: "Expand policies aimed at improving the situation for Indigenous Canadians",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q06_r02.jpg",
+                    r_02: "Work to remove any special status and programs for Indigenous Canadians",
                     pl_code_01: "q06_r01",
                     pl_code_02: "q06_r02"
                 },{
-                    text: "(7/15) In Canada, we should...",
+                    text: "(7/15) There should be...",
                     img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q07_r01.jpg",
-                    r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q07_r02.jpeg",
-                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    r_01: "More public support for the poor, the disadvantaged and those in economic trouble",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q07_r02.jpg",
+                    r_02: "More emphasis on a system that rewards hard work and initiative",
                     pl_code_01: "q07_r01",
                     pl_code_02: "q07_r02"
                 },{
-                    text: "(8/15) In Canada, we should...",
+                    text: "(8/15) Overall, Canada's policies should...",
                     img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q08_r01.jpg",
-                    r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q08_r02.jpeg",
-                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    r_01: "Emphasize environmental protection over economic growth",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q08_r02.jpg",
+                    r_02: "Emphasize economic growth over environmental protection",
                     pl_code_01: "q08_r01",
                     pl_code_02: "q08_r02"
                 },{
-                    text: "(9/15) In Canada, we should...",
+                    text: "(9/15) Overall, it would be better to...",
                     img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q09_r01.png",
-                    r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q09_r02.jpeg",
-                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    r_01: "Leave the economy more to the free market",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q09_r02.jpg",
+                    r_02: "Have more government involvement and regulation of the economy",
                     pl_code_01: "q09_r01",
                     pl_code_02: "q09_r02"
                 },{
-                    text: "(10/15) In Canada, we should...",
+                    text: "(10/15) On childcare, would you say...",
                     img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q10_r01.jpg",
-                    r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q10_r02.jpeg",
-                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    r_01: "A national child care program is a needed investment in the next generation",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q10_r02.jpg",
+                    r_02: "Leave it as the responsibility of parents to work out their own best child care options",
                     pl_code_01: "q10_r01",
                     pl_code_02: "q10_r02"
                 },{
-                    text: "(11/15) In Canada, we should...",
+                    text: "(11/15) When it comes to doctor-assisted dying...",
                     img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q11_r01.jpg",
-                    r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q11_r02.jpeg",
-                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    r_01: "It should be easier for individual Canadians to make their own end-of-life decisions",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q11_r02.jpg",
+                    r_02: "There should be lots of safeguards restricting access to doctor-assisted death",
                     pl_code_01: "q11_r01",
                     pl_code_02: "q11_r02"
                 },{
-                    text: "(12/15) In Canada, we should...",
+                    text: "(12/15) Do you think of Canada's oil industry in Alberta and other parts of the country as:",
                     img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q12_r01.jpg",
-                    r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q12_r02.jpeg",
-                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    r_01: "An overall liability because of the environmental risk",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q12_r02.jpg",
+                    r_02: "An overall asset because of its contribution to the Canadian economy",
                     pl_code_01: "q12_r01",
                     pl_code_02: "q12_r02"
                 },{
-                    text: "(13/15) In Canada, we should...",
+                    text: "(13/15) Please indicate which one you think is more important for a child to have:",
                     img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q13_r01.jpg",
-                    r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q13_r02.jpeg",
-                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    r_01: "Good manners",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q13_r02.jpg",
+                    r_02: "Curiosity ",
                     pl_code_01: "q13_r01",
                     pl_code_02: "q13_r02"
                 },{
-                    text: "(14/15) In Canada, we should...",
+                    text: "(14/15) In terms of individual success, would you say:",
                     img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q14_r01.jpg",
-                    r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q14_r02.jpeg",
-                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    r_01: "People who are rich mostly got there through hard work",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q14_r02.jpg",
+                    r_02: "People who are rich mostly got there through family connections or luck",
                     pl_code_01: "q14_r01",
                     pl_code_02: "q14_r02"
                 },{
-                    text: "(15/15) In Canada, we should...",
+                    text: "(15/15) In your view:",
                     img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q15_r01.jpg",
-                    r_01: "Keep God and religion completely out of public life",
-                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q15_r02.jpeg",
-                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    r_01: "Most of the stories you see in the news can't be trusted",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q15_r02.jpg",
+                    r_02: "News media do a good job presenting the facts",
                     pl_code_01: "q15_r01",
                     pl_code_02: "q15_r02"
                 }
@@ -702,6 +702,7 @@ nextQuestion = function(bot, message) {
         survey_step++
     } else {
         cndValEnd(bot, message)
+        survey_step = 0
     }
 }
 
@@ -732,7 +733,7 @@ cndValQuestion = function(bot, message, question) {
                             {
                                 'type': 'postback',
                                 'title': 'Select',
-                                'payload': question.pl_code_01
+                                'payload': question.pl_code_02
                             }
                         ]
                     }
