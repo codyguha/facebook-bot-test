@@ -2,6 +2,37 @@ var Botkit = require('botkit/lib/Botkit.js');
 var mongodb = require('mongodb');
 const request = require('request');
 
+const SURVEY = [
+                {
+                    text: "(1/15) Canadian society should work towards...",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q01_r01.jpg",
+                    r_01: "Greater acceptance of people who are LGBTQ (lesbian, gay, bi-sexual, transgender, queer)",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q01_r02.jpeg",
+                    r_02: "More recognition of the importance of traditional families where a man is married to a woman",
+                    pl_code_01: "q01_r01",
+                    pl_code_02: "q01_r02"
+                },{
+                    text: "(2/15) Canada's immigration and refugee policies should...",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q02_r01.jpg",
+                    r_01: "Give priority to people in crisis abroad",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q02_r02.jpg",
+                    r_02: "Give priority to Canada's own economic and workforce needs",
+                    pl_code_01: "q02_r01",
+                    pl_code_02: "q02_r02"
+                },{
+                    text: "(3/15) In Canada, we should...",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    r_01: "Keep God and religion completely out of public life",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    pl_code_01: "q02_r01",
+                    pl_code_02: "q02_r02"
+                }
+
+            ]
+
+var survey_step = 0
+
 var controller = Botkit.facebookbot({
     debug: true,
     access_token: process.env.page_token,
@@ -238,45 +269,6 @@ controller.hears(['hi', 'Hi'], 'message_received', function(bot, message) {
     });
 });
 
-controller.hears(['yop'], 'message_received', function(bot, message) {
-    bot.reply(message, `(1/15) Canadian society should work towards...`);
-    var attachment = {
-        'type':'template',
-        'payload': {
-                'template_type': 'generic',
-                'elements': [
-                    {
-                        'title': `Option 1`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q01_r01.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q01_r01'
-                            }
-                        ]
-                    },
-                    {
-                        'title': `Option 2`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q01_r02.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q01_r02'
-                            }
-                        ]
-                    }
-                ]
-            }
-    };
-
-    bot.reply(message, {
-        attachment: attachment,
-    });
-
-});
-
 controller.hears(['what can I do here?'], 'message_received', function(bot, message) {
     bot.reply(message, "You can complete surveys with me to help me complete my research!");
 });
@@ -313,14 +305,15 @@ controller.on('facebook_postback', function(bot, message) {
         } else if (message.payload === 'yes(cndval)') {
             canadianValuesSurvey(bot, message);
         } else if (message.payload === `get started canadian`) {
-            cndValQ01(bot, message);
+            startSurvey(bot, message)
+            // cndValQ01(bot, message);
         } else if (message.payload === `q01_r01` || message.payload === `q01_r02`) {
             if (message.payload === `q01_r01`){
                 saveToMongoDb(message.user, 1, "q01")
             } else {
                 saveToMongoDb(message.user, 2, "q01")
             }
-            cndValQ02(bot, message);
+            nextQuestion(bot, message);
         } else if (message.payload === `q02_r01` || message.payload === `q02_r02`) {
             if (message.payload === `q02_r01`){
                 saveToMongoDb(message.user, 1, "q02")
@@ -448,7 +441,6 @@ canadianValuesSurvey = function(bot, message) {
         attachment: attachment,
     });
 }
-
 
 //QUESTIONS
 
@@ -701,6 +693,61 @@ sayThanks = function(bot, message) {
 }
 
 // CANADIAN VALUES
+startSurvey = function(bot, message) {
+    var first_question = SURVEY[0];
+    survey_step++
+    cndValQuestion(bot, message, first_question)
+}
+
+nextQuestion = function(bot, message) {
+    if (survey_step <= 14 ) {
+        cndValQuestion(bot, message, SURVEY[survey_step])
+        survey_step++
+    } else {
+        cndValEnd(bot, message)
+    }
+}
+
+cndValQuestion = function(bot, message, question) {
+    bot.reply(message, question.text);
+    var attachment = {
+        'type':'template',
+        'payload': {
+                'template_type': 'generic',
+                'elements': [
+                    {
+                        'title': `Option 1`,
+                        'image_url': question.img_01,
+                        'subtitle': question.r_01,
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'Select',
+                                'payload': question.pl_code_01
+                            }
+                        ]
+                    },
+                    {
+                        'title': `Option 2`,
+                        'image_url': question.img_02,
+                        'subtitle': question.r_02,
+                        'buttons': [
+                            {
+                                'type': 'postback',
+                                'title': 'Select',
+                                'payload': question.pl_code_01
+                            }
+                        ]
+                    }
+                ]
+            }
+    };
+
+    bot.reply(message, {
+        attachment: attachment,
+    });
+}
+
 cndValQ01 = function(bot, message) {
     bot.reply(message, `(1/15) Canadian society should work towards...`);
     var attachment = {
@@ -1382,18 +1429,18 @@ cndValEndCS = function (bot, message) {
     bot.reply(message, `That's it ! You are a Cautious Skeptic!`);
 }
 cndValEndPR = function (bot, message) {
-        bot.reply(message, `read more at http://angusreid.org/permissive-reformers/`);
+    bot.reply(message, `read more at http://angusreid.org/permissive-reformers/`);
     bot.reply(message, `That's it ! You are a Permissive Reformer!`);
 }
 cndValEndFBT = function (bot, message) {
-        bot.reply(message, `read more at http://angusreid.org/faith-based-traditionalists`);
+    bot.reply(message, `read more at http://angusreid.org/faith-based-traditionalists`);
     bot.reply(message, `That's it ! You are a Faith Based Traditionalist!`);
 }
 cndValEndFEE = function (bot, message) {
-        bot.reply(message, `read more at http://angusreid.org/free-enterprise-enthusiasts`);
+    bot.reply(message, `read more at http://angusreid.org/free-enterprise-enthusiasts`);
     bot.reply(message, `That's it ! You are a Free Enterprise Enthusiast!`);
 }
 cndValEndPSP = function (bot, message) {
-        bot.reply(message, `read more at http://angusreid.org/public-sector-proponents`);
+    bot.reply(message, `read more at http://angusreid.org/public-sector-proponents`);
     bot.reply(message, `That's it ! You are a Public Sector Proponent!`);
 }
