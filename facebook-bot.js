@@ -184,12 +184,9 @@ saveToMongoDb = function (id, value, key) {
                     }
             });    
         } else {
-            results.update({
-                _id: `${id}`}, 
-                    {   $set: {
-                            canadian_values_survey[key]: value
-                    }
-            });    
+            var canadian_values_survey = {};
+            canadian_values_survey[key] = value
+            results.update({_id: `${id}`}, {   $set: canadian_values_survey   });    
         }
     })
 }
