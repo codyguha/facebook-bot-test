@@ -187,7 +187,7 @@ saveToMongoDb = function (id, value, key) {
             var g = "canadian_values_survey." + key
             var obj = {};
             obj[g] = value
-            results.update({_id: `${id}`}, {   $set:  canadian_values_survey }); 
+            results.update({_id: `${id}`}, {   $set:  obj }); 
         }
     })
 }
