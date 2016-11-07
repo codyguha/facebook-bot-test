@@ -27,6 +27,102 @@ const SURVEY = [
                     r_02: "Publicly celebrate the role of faith in our collective lives",
                     pl_code_01: "q02_r01",
                     pl_code_02: "q02_r02"
+                },{
+                    text: "(4/15) In Canada, we should...",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    r_01: "Keep God and religion completely out of public life",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    pl_code_01: "q02_r01",
+                    pl_code_02: "q02_r02"
+                },{
+                    text: "(5/15) In Canada, we should...",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    r_01: "Keep God and religion completely out of public life",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    pl_code_01: "q02_r01",
+                    pl_code_02: "q02_r02"
+                },{
+                    text: "(6/15) In Canada, we should...",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    r_01: "Keep God and religion completely out of public life",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    pl_code_01: "q02_r01",
+                    pl_code_02: "q02_r02"
+                },{
+                    text: "(7/15) In Canada, we should...",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    r_01: "Keep God and religion completely out of public life",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    pl_code_01: "q02_r01",
+                    pl_code_02: "q02_r02"
+                },{
+                    text: "(8/15) In Canada, we should...",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    r_01: "Keep God and religion completely out of public life",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    pl_code_01: "q02_r01",
+                    pl_code_02: "q02_r02"
+                },{
+                    text: "(9/15) In Canada, we should...",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    r_01: "Keep God and religion completely out of public life",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    pl_code_01: "q02_r01",
+                    pl_code_02: "q02_r02"
+                },{
+                    text: "(10/15) In Canada, we should...",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    r_01: "Keep God and religion completely out of public life",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    pl_code_01: "q02_r01",
+                    pl_code_02: "q02_r02"
+                },{
+                    text: "(11/15) In Canada, we should...",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    r_01: "Keep God and religion completely out of public life",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    pl_code_01: "q02_r01",
+                    pl_code_02: "q02_r02"
+                },{
+                    text: "(12/15) In Canada, we should...",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    r_01: "Keep God and religion completely out of public life",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    pl_code_01: "q02_r01",
+                    pl_code_02: "q02_r02"
+                },{
+                    text: "(13/15) In Canada, we should...",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    r_01: "Keep God and religion completely out of public life",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    pl_code_01: "q02_r01",
+                    pl_code_02: "q02_r02"
+                },{
+                    text: "(14/15) In Canada, we should...",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    r_01: "Keep God and religion completely out of public life",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    pl_code_01: "q02_r01",
+                    pl_code_02: "q02_r02"
+                },{
+                    text: "(15/15) In Canada, we should...",
+                    img_01: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r01.jpg",
+                    r_01: "Keep God and religion completely out of public life",
+                    img_02: "https://raw.githubusercontent.com/codyguha/survey-images/master/cndvaluesimgs/q03_r02.jpeg",
+                    r_02: "Publicly celebrate the role of faith in our collective lives",
+                    pl_code_01: "q02_r01",
+                    pl_code_02: "q02_r02"
                 }
 
             ]
@@ -87,112 +183,14 @@ saveToMongoDb = function (id, value, key) {
                             "chicken_survey.hungry": value
                     }
             });    
-        } else if (key === "q01"){
+        } else {
             results.update({
                 _id: `${id}`}, 
                     {   $set: {
-                            "canadian_values_survey.q01": value
+                            canadian_values_survey[key]: value
                     }
             });    
-        } else if (key === "q02"){
-            results.update({
-                _id: `${id}`}, 
-                    {   $set: {
-                            "canadian_values_survey.q02": value
-                    }
-            });    
-        } else if (key === "q03"){
-            results.update({
-                _id: `${id}`}, 
-                    {   $set: {
-                            "canadian_values_survey.q03": value
-                    }
-            });    
-        } else if (key === "q04"){
-            results.update({
-                _id: `${id}`}, 
-                    {   $set: {
-                            "canadian_values_survey.q04": value
-                    }
-            });    
-        } else if (key === "q05"){
-            results.update({
-                _id: `${id}`}, 
-                    {   $set: {
-                            "canadian_values_survey.q05": value
-                    }
-            });    
-        } else if (key === "q06"){
-            results.update({
-                _id: `${id}`}, 
-                    {   $set: {
-                            "canadian_values_survey.q06": value
-                    }
-            });    
-        } else if (key === "q07"){
-            results.update({
-                _id: `${id}`}, 
-                    {   $set: {
-                            "canadian_values_survey.q07": value
-                    }
-            });    
-        } else if (key === "q08"){
-            results.update({
-                _id: `${id}`}, 
-                    {   $set: {
-                            "canadian_values_survey.q08": value
-                    }
-            });    
-        } else if (key === "q09"){
-            results.update({
-                _id: `${id}`}, 
-                    {   $set: {
-                            "canadian_values_survey.q09": value
-                    }
-            });    
-        } else if (key === "q10"){
-            results.update({
-                _id: `${id}`}, 
-                    {   $set: {
-                            "canadian_values_survey.q10": value
-                    }
-            });    
-        } else if (key === "q11"){
-            results.update({
-                _id: `${id}`}, 
-                    {   $set: {
-                            "canadian_values_survey.q11": value
-                    }
-            });    
-        } else if (key === "q12"){
-            results.update({
-                _id: `${id}`}, 
-                    {   $set: {
-                            "canadian_values_survey.q12": value
-                    }
-            });    
-        } else if (key === "q13"){
-            results.update({
-                _id: `${id}`}, 
-                    {   $set: {
-                            "canadian_values_survey.q13": value
-                    }
-            });    
-        } else if (key === "q14"){
-            results.update({
-                _id: `${id}`}, 
-                    {   $set: {
-                            "canadian_values_survey.q14": value
-                    }
-            });    
-        } else if (key === "q15"){
-            results.update({
-                _id: `${id}`}, 
-                    {   $set: {
-                            "canadian_values_survey.q15": value
-                    }
-            });    
-        } 
+        }
     })
 }
 
@@ -320,91 +318,91 @@ controller.on('facebook_postback', function(bot, message) {
             } else {
                 saveToMongoDb(message.user, 2, "q02")
             }
-            cndValQ03(bot, message);
+            nextQuestion(bot, message);
         } else if (message.payload === `q03_r01` || message.payload === `q03_r02`) {
             if (message.payload === `q03_r01`){
                 saveToMongoDb(message.user, 1, "q03")
             } else {
                 saveToMongoDb(message.user, 2, "q03")
             }
-            cndValQ04(bot, message);
+            nextQuestion(bot, message);
         } else if (message.payload === `q04_r01` || message.payload === `q04_r02`) {
             if (message.payload === `q04_r01`){
                 saveToMongoDb(message.user, 1, "q04")
             } else {
                 saveToMongoDb(message.user, 2, "q04")
             }
-            cndValQ05(bot, message);
+            nextQuestion(bot, message);
         } else if (message.payload === `q05_r01` || message.payload === `q05_r02`) {
             if (message.payload === `q05_r01`){
                 saveToMongoDb(message.user, 1, "q05")
             } else {
                 saveToMongoDb(message.user, 2, "q05")
             }
-            cndValQ06(bot, message);
+            nextQuestion(bot, message);
         } else if (message.payload === `q06_r01` || message.payload === `q06_r02`) {
             if (message.payload === `q06_r01`){
                 saveToMongoDb(message.user, 1, "q06")
             } else {
                 saveToMongoDb(message.user, 2, "q06")
             }
-            cndValQ07(bot, message);
+            nextQuestion(bot, message);
         } else if (message.payload === `q07_r01` || message.payload === `q07_r02`) {
             if (message.payload === `q07_r01`){
                 saveToMongoDb(message.user, 1, "q07")
             } else {
                 saveToMongoDb(message.user, 2, "q07")
             }
-            cndValQ08(bot, message);
+            nextQuestion(bot, message);
         } else if (message.payload === `q08_r01` || message.payload === `q08_r02`) {
             if (message.payload === `q08_r01`){
                 saveToMongoDb(message.user, 1, "q08")
             } else {
                 saveToMongoDb(message.user, 2, "q08")
             }
-            cndValQ09(bot, message);
+            nextQuestion(bot, message);
         } else if (message.payload === `q09_r01` || message.payload === `q09_r02`) {
             if (message.payload === `q09_r01`){
                 saveToMongoDb(message.user, 1, "q09")
             } else {
                 saveToMongoDb(message.user, 2, "q09")
             }
-            cndValQ010(bot, message);
+            nextQuestion(bot, message);
         } else if (message.payload === `q10_r01` || message.payload === `q10_r02`) {
             if (message.payload === `q10_r01`){
                 saveToMongoDb(message.user, 1, "q10")
             } else {
                 saveToMongoDb(message.user, 2, "q10")
             }
-            cndValQ011(bot, message);
+            nextQuestion(bot, message);
         } else if (message.payload === `q11_r01` || message.payload === `q11_r02`) {
             if (message.payload === `q11_r01`){
                 saveToMongoDb(message.user, 1, "q11")
             } else {
                 saveToMongoDb(message.user, 2, "q11")
             }
-            cndValQ012(bot, message);
+            nextQuestion(bot, message);
         } else if (message.payload === `q12_r01` || message.payload === `q12_r02`) {
             if (message.payload === `q12_r01`){
                 saveToMongoDb(message.user, 1, "q12")
             } else {
                 saveToMongoDb(message.user, 2, "q12")
             }
-            cndValQ013(bot, message);
+            nextQuestion(bot, message);
         } else if (message.payload === `q13_r01` || message.payload === `q13_r02`) {
             if (message.payload === `q13_r01`){
                 saveToMongoDb(message.user, 1, "q13")
             } else {
                 saveToMongoDb(message.user, 2, "q13")
             }
-            cndValQ014(bot, message);
+            nextQuestion(bot, message);
         } else if (message.payload === `q14_r01` || message.payload === `q14_r02`) {
             if (message.payload === `q14_r01`){
                 saveToMongoDb(message.user, 1, "q14")
             } else {
                 saveToMongoDb(message.user, 2, "q14")
             }
-            cndValQ015(bot, message);
+            nextQuestion(bot, message);
         } else if (message.payload === `q15_r01` || message.payload === `q15_r02`) {
             if (message.payload === `q15_r01`){
                 saveToMongoDb(message.user, 1, "q15")
@@ -694,7 +692,8 @@ sayThanks = function(bot, message) {
 
 // CANADIAN VALUES
 startSurvey = function(bot, message) {
-    var first_question = SURVEY[0];
+    survey_step = 0
+    var first_question = SURVEY[survey_step];
     survey_step++
     cndValQuestion(bot, message, first_question)
 }
@@ -742,580 +741,6 @@ cndValQuestion = function(bot, message, question) {
                 ]
             }
     };
-
-    bot.reply(message, {
-        attachment: attachment,
-    });
-}
-
-cndValQ01 = function(bot, message) {
-    bot.reply(message, `(1/15) Canadian society should work towards...`);
-    var attachment = {
-        'type':'template',
-        'payload': {
-                'template_type': 'generic',
-                'elements': [
-                    {
-                        'title': `Option 1`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q01_r01.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q01_r01'
-                            }
-                        ]
-                    },
-                    {
-                        'title': `Option 2`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q01_r02.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q01_r02'
-                            }
-                        ]
-                    }
-                ]
-            }
-    };
-
-    bot.reply(message, {
-        attachment: attachment,
-    });
-}
-
-cndValQ02 = function(bot, message) {
-    bot.reply(message, `(2/15) Canada's immigration and refugee policies should...`);
-    var attachment = {
-        'type':'template',
-        'payload': {
-                'template_type': 'generic',
-                'elements': [
-                    {
-                        'title': `Option 1`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q02_r01.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q02_r01'
-                            }
-                        ]
-                    },
-                    {
-                        'title': `Option 2`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q02_r02.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q02_r02'
-                            }
-                        ]
-                    }
-                ]
-            }
-    };
-
-    bot.reply(message, {
-        attachment: attachment,
-    });
-
-}
-
-cndValQ03 = function(bot, message) {
-    bot.reply(message, `(3/15) In Canada, we should...`);
-    var attachment = {
-        'type':'template',
-        'payload': {
-                'template_type': 'generic',
-                'elements': [
-                    {
-                        'title': `Option 1`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q03_r01.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q03_r01'
-                            }
-                        ]
-                    },
-                    {
-                        'title': `Option 2`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q03_r02.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q03_r02'
-                            }
-                        ]
-                    }
-                ]
-            }
-    };
-
-    bot.reply(message, {
-        attachment: attachment,
-    });
-
-}
-
-cndValQ04 = function(bot, message) {
-    bot.reply(message, `(4/15) In the Canadian workplace:`);
-    var attachment = {
-        'type':'template',
-        'payload': {
-                'template_type': 'generic',
-                'elements': [
-                    {
-                        'title': `Option 1`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q04_r01.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q04_r01'
-                            }
-                        ]
-                    },
-                    {
-                        'title': `Option 2`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q04_r02.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q04_r02'
-                            }
-                        ]
-                    }
-                ]
-            }
-    };
-
-    bot.reply(message, {
-        attachment: attachment,
-    });
-
-}
-
-cndValQ05 = function(bot, message) {
-    bot.reply(message, `(5/15) Regarding health care, we should...`);
-    var attachment = {
-        'type':'template',
-        'payload': {
-                'template_type': 'generic',
-                'elements': [
-                    {
-                        'title': `Option 1`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q05_r01.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q05_r01'
-                            }
-                        ]
-                    },
-                    {
-                        'title': `Option 2`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q05_r02.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q05_r02'
-                            }
-                        ]
-                    }
-                ]
-            }
-    };
-
-    bot.reply(message, {
-        attachment: attachment,
-    });
-
-}
-cndValQ06 = function(bot, message) {
-    bot.reply(message, `(6/15) Canada should...`);
-    var attachment = {
-        'type':'template',
-        'payload': {
-                'template_type': 'generic',
-                'elements': [
-                    {
-                        'title': `Option 1`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q06_r01.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q06_r01'
-                            }
-                        ]
-                    },
-                    {
-                        'title': `Option 2`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q06_r02.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q06_r02'
-                            }
-                        ]
-                    }
-                ]
-            }
-    };
-
-    bot.reply(message, {
-        attachment: attachment,
-    });
-
-}
-cndValQ07 = function(bot, message) {
-    bot.reply(message, `(7/15) There should be...`);
-    var attachment = {
-        'type':'template',
-        'payload': {
-                'template_type': 'generic',
-                'elements': [
-                    {
-                        'title': `Option 1`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q07_r01.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q07_r01'
-                            }
-                        ]
-                    },
-                    {
-                        'title': `Option 2`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q07_r02.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q07_r02'
-                            }
-                        ]
-                    }
-                ]
-            }
-    };
-
-    bot.reply(message, {
-        attachment: attachment,
-    });
-
-}
-cndValQ08 = function(bot, message) {
-    bot.reply(message, `(8/15) Overall, Canada's policies should...`);
-    var attachment = {
-        'type':'template',
-        'payload': {
-                'template_type': 'generic',
-                'elements': [
-                    {
-                        'title': `Option 1`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q08_r01.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q08_r01'
-                            }
-                        ]
-                    },
-                    {
-                        'title': `Option 2`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q08_r02.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q08_r02'
-                            }
-                        ]
-                    }
-                ]
-            }
-    };
-
-    bot.reply(message, {
-        attachment: attachment,
-    });
-
-}
-cndValQ09 = function(bot, message) {
-    bot.reply(message, `(9/15) Overall, it would be better to...`);
-    var attachment = {
-        'type':'template',
-        'payload': {
-                'template_type': 'generic',
-                'elements': [
-                    {
-                        'title': `Option 1`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q09_r01.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q09_r01'
-                            }
-                        ]
-                    },
-                    {
-                        'title': `Option 2`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q09_r02.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q09_r02'
-                            }
-                        ]
-                    }
-                ]
-            }
-    };
-
-    bot.reply(message, {
-        attachment: attachment,
-    });
-
-}
-cndValQ010 = function(bot, message) {
-    bot.reply(message, `(10/15) On childcare, would you say...`);
-    var attachment = {
-        'type':'template',
-        'payload': {
-                'template_type': 'generic',
-                'elements': [
-                    {
-                        'title': `Option 1`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q10_r01.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q10_r01'
-                            }
-                        ]
-                    },
-                    {
-                        'title': `Option 2`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q10_r02.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q10_r02'
-                            }
-                        ]
-                    }
-                ]
-            }
-    };
-
-    bot.reply(message, {
-        attachment: attachment,
-    });
-
-}
-cndValQ011 = function(bot, message) {
-    bot.reply(message, `(11/15) When it comes to doctor-assisted dying...`);
-    var attachment = {
-        'type':'template',
-        'payload': {
-                'template_type': 'generic',
-                'elements': [
-                    {
-                        'title': `Option 1`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q11_r01.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q11_r01'
-                            }
-                        ]
-                    },
-                    {
-                        'title': `Option 2`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q11_r02.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q11_r02'
-                            }
-                        ]
-                    }
-                ]
-            }
-    };
-
-    bot.reply(message, {
-        attachment: attachment,
-    });
-
-}
-cndValQ012 = function(bot, message) {
-    bot.reply(message, `(12/15) Do you think of Canada's oil industry in Alberta and other parts of the country as:`);
-    var attachment = {
-        'type':'template',
-        'payload': {
-                'template_type': 'generic',
-                'elements': [
-                    {
-                        'title': `Option 1`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q12_r01.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q12_r01'
-                            }
-                        ]
-                    },
-                    {
-                        'title': `Option 2`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q12_r02.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q12_r02'
-                            }
-                        ]
-                    }
-                ]
-            }
-    };
-
-    bot.reply(message, {
-        attachment: attachment,
-    });
-
-}
-cndValQ013 = function(bot, message) {
-    bot.reply(message, `(13/15) Please indicate which one you think is more important for a child to have:`);
-    var attachment = {
-        'type':'template',
-        'payload': {
-                'template_type': 'generic',
-                'elements': [
-                    {
-                        'title': `Option 1`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q13_r01.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q13_r01'
-                            }
-                        ]
-                    },
-                    {
-                        'title': `Option 2`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q13_r02.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q13_r02'
-                            }
-                        ]
-                    }
-                ]
-            }
-    };
-
-    bot.reply(message, {
-        attachment: attachment,
-    });
-
-}
-cndValQ014 = function(bot, message) {
-    bot.reply(message, `(14/15) In terms of individual success, would you say:`);
-    var attachment = {
-        'type':'template',
-        'payload': {
-                'template_type': 'generic',
-                'elements': [
-                    {
-                        'title': `Option 1`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q14_r01.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q14_r01'
-                            }
-                        ]
-                    },
-                    {
-                        'title': `Option 2`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q14_r02.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q14_r02'
-                            }
-                        ]
-                    }
-                ]
-            }
-    };
-
-    bot.reply(message, {
-        attachment: attachment,
-    });
-
-}
-cndValQ015 = function(bot, message) {
-    bot.reply(message, `(15/15) In your view:`);
-    var attachment = {
-        'type':'template',
-        'payload': {
-                'template_type': 'generic',
-                'elements': [
-                    {
-                        'title': `Option 1`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q15_r01.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q15_r01'
-                            }
-                        ]
-                    },
-                    {
-                        'title': `Option 2`,
-                        'image_url': 'https://raw.githubusercontent.com/codyguha/survey-images/master/cndval-imgs/q15_r02.png',
-                        'buttons': [
-                            {
-                                'type': 'postback',
-                                'title': 'Select',
-                                'payload': 'q15_r02'
-                            }
-                        ]
-                    }
-                ]
-            }
-    };
-
     bot.reply(message, {
         attachment: attachment,
     });
